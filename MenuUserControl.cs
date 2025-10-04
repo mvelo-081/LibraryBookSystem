@@ -18,7 +18,7 @@ namespace LibraryBookSystem
         private Button menuBtn;
 
         private Button viewReservationBtn;
-        public MenuUserControl(Panel homePagePanel, Button menuBtn, Button viewReservationBtn)
+        public MenuUserControl(Panel homePagePanel, Button menuBtn, Button viewReservationBtn = null)
         {
             InitializeComponent();
 

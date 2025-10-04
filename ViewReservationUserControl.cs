@@ -47,6 +47,8 @@ namespace LibraryBookSystem
 
             studentEmailData.TextChanged += new EventHandler(fillStudentNamesAndSurname);
         }
+
+        // overloaded constructor  
         public ViewReservationUserControl(Panel homePagePanel, Button menuBtn, Button ViewReservationBtn, bookingsUserControl.Student studentDdata)
         {
             InitializeComponent();
@@ -79,6 +81,8 @@ namespace LibraryBookSystem
 
             studentEmailData.TextChanged += new EventHandler(fillStudentNamesAndSurname);
         }
+
+        // Method to autocomplete && suggest book tiitles that are available inthe database
         private AutoCompleteStringCollection GetBookTitles()
         {
             AutoCompleteStringCollection bookTitles = new AutoCompleteStringCollection();
@@ -102,6 +106,7 @@ namespace LibraryBookSystem
             return bookTitles;
         }
 
+        // This autoCompletes the student emails that exits in the database
         private AutoCompleteStringCollection GetStudentEmails()
         {
             ErrorLabel.Visible = false;
@@ -126,6 +131,8 @@ namespace LibraryBookSystem
 
             return studentEmails;
         }
+
+        // fill in the name of the student usong the email that was provided above (Autocopmle by a matchinig name&surame using a student email)
         private void fillStudentNamesAndSurname(object sender, EventArgs e)
         {
             string query = "SELECT Student_FName, Student_LName FROM Student WHERE Student_Email = @email";
@@ -147,6 +154,7 @@ namespace LibraryBookSystem
         }
 
 
+        // Handles the function of the cancel buttom
         private void handleCancelBtn(object sender, EventArgs e)
         {
             homePagePanel.Controls.Clear();
@@ -157,6 +165,9 @@ namespace LibraryBookSystem
 
             ViewReservationBtn.Text = "Add Reservation";
         }
+
+
+        // get the book id of the book to be reserved (using the book titlle )
         private String getBookId()
         {
             String bookTitle = bookTitleData.Text;
@@ -184,6 +195,8 @@ namespace LibraryBookSystem
                 }
             }
         }
+
+        // gets the studnet id that will be used to make the reservation (links the student too dthe reservation)
         private String getStudentId()
         {
             String studentEmail = studentEmailData.Text;
@@ -212,6 +225,8 @@ namespace LibraryBookSystem
                 }
             }
         }
+
+        // chhechks if tthere is a pending reservation for the book the student is going to reserve
         private Boolean isThereReservation()
         {
             String studentId;
@@ -256,6 +271,8 @@ namespace LibraryBookSystem
             }
         }
 
+
+        // habdles the submittion of the reservation by performing relevant actions
         private void handleBookingSubmitBtn(object sender, EventArgs e)
         {
             if (isThereReservation())

@@ -10,8 +10,6 @@
 
 #pragma warning disable 1591
 
-using System;
-
 namespace LibraryBookSystem {
     
     
@@ -1754,7 +1752,7 @@ namespace LibraryBookSystem {
             
             private global::System.Data.DataColumn columnStudent_Email;
             
-            private global::System.Data.DataColumn columnStudent_CellphoneNo_;
+            private global::System.Data.DataColumn columnStudent_CellphoneNo;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -1823,9 +1821,9 @@ namespace LibraryBookSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Student_CellphoneNo_Column {
+            public global::System.Data.DataColumn Student_CellphoneNoColumn {
                 get {
-                    return this.columnStudent_CellphoneNo_;
+                    return this.columnStudent_CellphoneNo;
                 }
             }
             
@@ -1866,14 +1864,14 @@ namespace LibraryBookSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public StudentRow AddStudentRow(int StudentID, string Student_FName, string Student_LName, string Student_Email, string Student_CellphoneNo_) {
+            public StudentRow AddStudentRow(int StudentID, string Student_FName, string Student_LName, string Student_Email, string Student_CellphoneNo) {
                 StudentRow rowStudentRow = ((StudentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         StudentID,
                         Student_FName,
                         Student_LName,
                         Student_Email,
-                        Student_CellphoneNo_};
+                        Student_CellphoneNo};
                 rowStudentRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStudentRow);
                 return rowStudentRow;
@@ -1907,7 +1905,7 @@ namespace LibraryBookSystem {
                 this.columnStudent_FName = base.Columns["Student_FName"];
                 this.columnStudent_LName = base.Columns["Student_LName"];
                 this.columnStudent_Email = base.Columns["Student_Email"];
-                this.columnStudent_CellphoneNo_ = base.Columns["Student_CellphoneNo_"];
+                this.columnStudent_CellphoneNo = base.Columns["Student_CellphoneNo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1921,8 +1919,8 @@ namespace LibraryBookSystem {
                 base.Columns.Add(this.columnStudent_LName);
                 this.columnStudent_Email = new global::System.Data.DataColumn("Student_Email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStudent_Email);
-                this.columnStudent_CellphoneNo_ = new global::System.Data.DataColumn("Student_CellphoneNo_", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnStudent_CellphoneNo_);
+                this.columnStudent_CellphoneNo = new global::System.Data.DataColumn("Student_CellphoneNo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStudent_CellphoneNo);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnStudentID}, true));
                 this.columnStudentID.AllowDBNull = false;
@@ -1933,8 +1931,8 @@ namespace LibraryBookSystem {
                 this.columnStudent_LName.MaxLength = 50;
                 this.columnStudent_Email.AllowDBNull = false;
                 this.columnStudent_Email.MaxLength = 50;
-                this.columnStudent_CellphoneNo_.AllowDBNull = false;
-                this.columnStudent_CellphoneNo_.MaxLength = 10;
+                this.columnStudent_CellphoneNo.AllowDBNull = false;
+                this.columnStudent_CellphoneNo.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2434,12 +2432,12 @@ namespace LibraryBookSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Student_CellphoneNo_ {
+            public string Student_CellphoneNo {
                 get {
-                    return ((string)(this[this.tableStudent.Student_CellphoneNo_Column]));
+                    return ((string)(this[this.tableStudent.Student_CellphoneNoColumn]));
                 }
                 set {
-                    this[this.tableStudent.Student_CellphoneNo_Column] = value;
+                    this[this.tableStudent.Student_CellphoneNoColumn] = value;
                 }
             }
         }
@@ -3542,42 +3540,42 @@ SELECT BorrowID, StudentID, BookID, Borrow_Date, Due_Date, Return_Date FROM Borr
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Reservation";
             tableMapping.ColumnMappings.Add("ReservationID", "ReservationID");
-            tableMapping.ColumnMappings.Add("StudentID", "StudentID");
+            tableMapping.ColumnMappings.Add("UserID", "StudentID");
             tableMapping.ColumnMappings.Add("BookID", "BookID");
             tableMapping.ColumnMappings.Add("Reserved_Date", "Reserved_Date");
             tableMapping.ColumnMappings.Add("Reservation_Status", "Reservation_Status");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Reservation] WHERE (([ReservationID] = @Original_ReservationID) AND ([StudentID] = @Original_UserID) AND ([BookID] = @Original_BookID) AND ([Reserved_Date] = @Original_Reserved_Date) AND ([Reservation_Status] = @Original_Reservation_Status))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Reservation] WHERE (([ReservationID] = @Original_ReservationID) AND ([UserID] = @Original_UserID) AND ([BookID] = @Original_BookID) AND ([Reserved_Date] = @Original_Reserved_Date) AND ([Reservation_Status] = @Original_Reservation_Status))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ReservationID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReservationID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StudentID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StudentID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BookID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BookID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Reserved_Date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reserved_Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Reservation_Status", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reservation_Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Reservation] ([ReservationID], [StudentID], [BookID], [Reserved_Date], [Reservation_Status]) VALUES (@ReservationID, @StudentID, @BookID, @Reserved_Date, @Reservation_Status);
-SELECT ReservationID, StudentID, BookID, Reserved_Date, Reservation_Status FROM Reservation WHERE (ReservationID = @ReservationID)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Reservation] ([ReservationID], [UserID], [BookID], [Reserved_Date], [Reservation_Status]) VALUES (@ReservationID, @UserID, @BookID, @Reserved_Date, @Reservation_Status);
+SELECT ReservationID, UserID, BookID, Reserved_Date, Reservation_Status FROM Reservation WHERE (ReservationID = @ReservationID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ReservationID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReservationID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StudentID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StudentID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BookID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BookID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Reserved_Date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reserved_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Reservation_Status", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reservation_Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Reservation] SET [ReservationID] = @ReservationID, [StudentID] = @StudentID, [BookID] = @BookID, [Reserved_Date] = @Reserved_Date, [Reservation_Status] = @Reservation_Status WHERE (([ReservationID] = @Original_ReservationID) AND ([StudentID] = @Original_UserID) AND ([BookID] = @Original_BookID) AND ([Reserved_Date] = @Original_Reserved_Date) AND ([Reservation_Status] = @Original_Reservation_Status));
-SELECT ReservationID, StudentID, BookID, Reserved_Date, Reservation_Status FROM Reservation WHERE (ReservationID = @ReservationID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Reservation] SET [ReservationID] = @ReservationID, [UserID] = @UserID, [BookID] = @BookID, [Reserved_Date] = @Reserved_Date, [Reservation_Status] = @Reservation_Status WHERE (([ReservationID] = @Original_ReservationID) AND ([UserID] = @Original_UserID) AND ([BookID] = @Original_BookID) AND ([Reserved_Date] = @Original_Reserved_Date) AND ([Reservation_Status] = @Original_Reservation_Status));
+SELECT ReservationID, UserID, BookID, Reserved_Date, Reservation_Status FROM Reservation WHERE (ReservationID = @ReservationID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ReservationID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReservationID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StudentID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StudentID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BookID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BookID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Reserved_Date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reserved_Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Reservation_Status", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reservation_Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ReservationID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReservationID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StudentID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BookID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BookID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Reserved_Date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reserved_Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Reservation_Status", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reservation_Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -3596,12 +3594,12 @@ SELECT ReservationID, StudentID, BookID, Reserved_Date, Reservation_Status FROM 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ReservationID, StudentID, BookID, Reserved_Date, Reservation_Status FROM dbo." +
+            this._commandCollection[0].CommandText = "SELECT ReservationID, UserID, BookID, Reserved_Date, Reservation_Status FROM dbo." +
                 "Reservation";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT ReservationID, StudentID, BookID, Reserved_Date, Reservation_Status FROM dbo." +
+            this._commandCollection[1].CommandText = "SELECT ReservationID, UserID, BookID, Reserved_Date, Reservation_Status FROM dbo." +
                 "Reservation";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
@@ -3702,9 +3700,9 @@ SELECT ReservationID, StudentID, BookID, Reserved_Date, Reservation_Status FROM 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ReservationID, int StudentID, int BookID, System.DateTime Reserved_Date, System.DateTime Reservation_Status) {
+        public virtual int Insert(int ReservationID, int UserID, int BookID, System.DateTime Reserved_Date, System.DateTime Reservation_Status) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ReservationID));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(StudentID));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(UserID));
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(BookID));
             this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(Reserved_Date));
             this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(Reservation_Status));
@@ -3728,9 +3726,9 @@ SELECT ReservationID, StudentID, BookID, Reserved_Date, Reservation_Status FROM 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ReservationID, int StudentID, int BookID, System.DateTime Reserved_Date, System.DateTime Reservation_Status, int Original_ReservationID, int Original_UserID, int Original_BookID, System.DateTime Original_Reserved_Date, System.DateTime Original_Reservation_Status) {
+        public virtual int Update(int ReservationID, int UserID, int BookID, System.DateTime Reserved_Date, System.DateTime Reservation_Status, int Original_ReservationID, int Original_UserID, int Original_BookID, System.DateTime Original_Reserved_Date, System.DateTime Original_Reservation_Status) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ReservationID));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(StudentID));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(UserID));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(BookID));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Reserved_Date));
             this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(Reservation_Status));
@@ -3759,8 +3757,8 @@ SELECT ReservationID, StudentID, BookID, Reserved_Date, Reservation_Status FROM 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int StudentID, int BookID, System.DateTime Reserved_Date, System.DateTime Reservation_Status, int Original_ReservationID, int Original_UserID, int Original_BookID, System.DateTime Original_Reserved_Date, System.DateTime Original_Reservation_Status) {
-            return this.Update(Original_ReservationID, StudentID, BookID, Reserved_Date, Reservation_Status, Original_ReservationID, Original_UserID, Original_BookID, Original_Reserved_Date, Original_Reservation_Status);
+        public virtual int Update(int UserID, int BookID, System.DateTime Reserved_Date, System.DateTime Reservation_Status, int Original_ReservationID, int Original_UserID, int Original_BookID, System.DateTime Original_Reserved_Date, System.DateTime Original_Reservation_Status) {
+            return this.Update(Original_ReservationID, UserID, BookID, Reserved_Date, Reservation_Status, Original_ReservationID, Original_UserID, Original_BookID, Original_Reserved_Date, Original_Reservation_Status);
         }
     }
     
@@ -4324,7 +4322,7 @@ SELECT StaffID, Staff_FName, Staff_LName, Staff_Username, Staff_Password, Staff_
             tableMapping.ColumnMappings.Add("Student_FName", "Student_FName");
             tableMapping.ColumnMappings.Add("Student_LName", "Student_LName");
             tableMapping.ColumnMappings.Add("Student_Email", "Student_Email");
-            tableMapping.ColumnMappings.Add("Student_CellphoneNo.", "Student_CellphoneNo_");
+            tableMapping.ColumnMappings.Add("Student_CellphoneNo.", "Student_CellphoneNo");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -5190,6 +5188,7 @@ SELECT StudentID, Student_FName, Student_LName, Student_Email, [Student_Cellphon
             }
             return false;
         }
+        
         /// <summary>
         ///Update Order Option
         ///</summary>

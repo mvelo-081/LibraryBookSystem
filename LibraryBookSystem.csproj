@@ -61,6 +61,7 @@
     <Reference Include="Microsoft.IdentityModel.Tokens, Version=8.3.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.IdentityModel.Tokens.8.3.1\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -170,6 +171,12 @@
     <Compile Include="ManagerMenuUserControl.Designer.cs">
       <DependentUpon>ManagerMenuUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManageStaff.Designer.cs">
+      <DependentUpon>ManageStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -202,6 +209,12 @@
     <Compile Include="ViewBooksUserControl.Designer.cs">
       <DependentUpon>ViewBooksUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewDatabase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewDatabase.Designer.cs">
+      <DependentUpon>ViewDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewReservationUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -232,6 +245,9 @@
     <EmbeddedResource Include="ManagerMenuUserControl.resx">
       <DependentUpon>ManagerMenuUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageStaff.resx">
+      <DependentUpon>ManageStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuUserControl.resx">
       <DependentUpon>MenuUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewBooksUserControl.resx">
       <DependentUpon>ViewBooksUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewDatabase.resx">
+      <DependentUpon>ViewDatabase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewReservationUserControl.resx">
       <DependentUpon>ViewReservationUserControl.cs</DependentUpon>

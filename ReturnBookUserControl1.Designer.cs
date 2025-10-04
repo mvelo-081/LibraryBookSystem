@@ -38,7 +38,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.studentnameSurnameTextData = new System.Windows.Forms.TextBox();
             this.BookCombBox = new System.Windows.Forms.ComboBox();
-            this.fetchBookListBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -56,7 +55,7 @@
             this.ErrorLabel.AutoSize = true;
             this.ErrorLabel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.ErrorLabel.Location = new System.Drawing.Point(288, 404);
+            this.ErrorLabel.Location = new System.Drawing.Point(315, 358);
             this.ErrorLabel.Name = "ErrorLabel";
             this.ErrorLabel.Size = new System.Drawing.Size(209, 17);
             this.ErrorLabel.TabIndex = 39;
@@ -68,7 +67,7 @@
             // 
             this.roleLabel.AutoSize = true;
             this.roleLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roleLabel.Location = new System.Drawing.Point(250, 70);
+            this.roleLabel.Location = new System.Drawing.Point(207, 78);
             this.roleLabel.Name = "roleLabel";
             this.roleLabel.Size = new System.Drawing.Size(164, 23);
             this.roleLabel.TabIndex = 29;
@@ -79,17 +78,17 @@
             this.studentEmailData.BackColor = System.Drawing.SystemColors.Control;
             this.studentEmailData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.studentEmailData.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentEmailData.Location = new System.Drawing.Point(252, 116);
+            this.studentEmailData.Location = new System.Drawing.Point(209, 124);
             this.studentEmailData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.studentEmailData.Name = "studentEmailData";
-            this.studentEmailData.Size = new System.Drawing.Size(277, 30);
+            this.studentEmailData.Size = new System.Drawing.Size(422, 30);
             this.studentEmailData.TabIndex = 30;
             // 
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.Location = new System.Drawing.Point(250, 270);
+            this.passwordLabel.Location = new System.Drawing.Point(207, 278);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(201, 23);
             this.passwordLabel.TabIndex = 31;
@@ -98,7 +97,7 @@
             // CancelBtn
             // 
             this.CancelBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelBtn.Location = new System.Drawing.Point(204, 423);
+            this.CancelBtn.Location = new System.Drawing.Point(253, 377);
             this.CancelBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CancelBtn.Name = "CancelBtn";
             this.CancelBtn.Size = new System.Drawing.Size(155, 34);
@@ -109,7 +108,7 @@
             // ConfirmBookReturnBtn
             // 
             this.ConfirmBookReturnBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfirmBookReturnBtn.Location = new System.Drawing.Point(443, 423);
+            this.ConfirmBookReturnBtn.Location = new System.Drawing.Point(436, 377);
             this.ConfirmBookReturnBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ConfirmBookReturnBtn.Name = "ConfirmBookReturnBtn";
             this.ConfirmBookReturnBtn.Size = new System.Drawing.Size(133, 34);
@@ -121,7 +120,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(250, 166);
+            this.label3.Location = new System.Drawing.Point(207, 174);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(212, 23);
             this.label3.TabIndex = 37;
@@ -132,37 +131,25 @@
             this.studentnameSurnameTextData.BackColor = System.Drawing.SystemColors.Control;
             this.studentnameSurnameTextData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.studentnameSurnameTextData.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentnameSurnameTextData.Location = new System.Drawing.Point(252, 212);
+            this.studentnameSurnameTextData.Location = new System.Drawing.Point(209, 220);
             this.studentnameSurnameTextData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.studentnameSurnameTextData.Name = "studentnameSurnameTextData";
-            this.studentnameSurnameTextData.Size = new System.Drawing.Size(277, 30);
+            this.studentnameSurnameTextData.Size = new System.Drawing.Size(422, 30);
             this.studentnameSurnameTextData.TabIndex = 38;
             // 
             // BookCombBox
             // 
             this.BookCombBox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BookCombBox.FormattingEnabled = true;
-            this.BookCombBox.Location = new System.Drawing.Point(252, 316);
+            this.BookCombBox.Location = new System.Drawing.Point(209, 324);
             this.BookCombBox.Name = "BookCombBox";
-            this.BookCombBox.Size = new System.Drawing.Size(277, 31);
+            this.BookCombBox.Size = new System.Drawing.Size(422, 31);
             this.BookCombBox.TabIndex = 40;
-            // 
-            // fetchBookListBtn
-            // 
-            this.fetchBookListBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fetchBookListBtn.Location = new System.Drawing.Point(252, 368);
-            this.fetchBookListBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.fetchBookListBtn.Name = "fetchBookListBtn";
-            this.fetchBookListBtn.Size = new System.Drawing.Size(277, 34);
-            this.fetchBookListBtn.TabIndex = 41;
-            this.fetchBookListBtn.Text = "Check pending returns";
-            this.fetchBookListBtn.UseVisualStyleBackColor = true;
             // 
             // ReturnBookUserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.fetchBookListBtn);
             this.Controls.Add(this.BookCombBox);
             this.Controls.Add(this.ErrorLabel);
             this.Controls.Add(this.studentnameSurnameTextData);
@@ -194,6 +181,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox studentnameSurnameTextData;
         private System.Windows.Forms.ComboBox BookCombBox;
-        private System.Windows.Forms.Button fetchBookListBtn;
     }
 }

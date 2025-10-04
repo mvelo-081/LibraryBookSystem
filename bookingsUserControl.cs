@@ -13,12 +13,13 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using static LibraryBookSystem.bookingsUserControl;
 using Twilio.TwiML.Voice;
+using System.Configuration;
 
 namespace LibraryBookSystem
 {
     public partial class bookingsUserControl : UserControl
     {
-        string connectionString = "Data Source=143.128.146.30\\istn2;Initial Catalog=ist2ko;Persist Security Info=True;User ID=ist2ko;Password=jioeox;Encrypt=True;TrustServerCertificate=True";
+        private string connectionString = ConfigurationManager.ConnectionStrings["LibraryBookSystem.Properties.Settings.ist2koConnectionString"].ConnectionString;
 
         private Panel homePagePanel;
 
@@ -156,7 +157,7 @@ namespace LibraryBookSystem
                     if (revID != null)
                     {
                         // Approve that reservation
-                        string updateQuery = "UPDATE Reservation SET Reservation_Status = 'Accepted' WHERE ReservationID = @revID AND StudentID = @StudentID AND Reservation_Status = 'Pending'";
+                        string updateQuery = "UPDATE Reservation SET Reservation_Status = 'Approved' WHERE ReservationID = @revID AND StudentID = @StudentID AND Reservation_Status = 'Pending'";
 
                         using (SqlCommand updateCmd = new SqlCommand(updateQuery, connection))
                         {
@@ -168,13 +169,7 @@ namespace LibraryBookSystem
                         }
                     }
 
-                    MessageBox.Show("This student had pending reservations. They were automatically approved.");
-                }
-                else
-                {
-                    ErrorLabel.Visible = false;
-                    bookingSubmitBtn.Enabled = true;
-                    MessageBox.Show("No pending reservations found for this student.");
+                    MessageBox.Show("This student a pending reservation for this book. \nIt was automatically approved.");
                 }
             }
         }
@@ -260,14 +255,14 @@ namespace LibraryBookSystem
 
                     if (count > 0)
                     {
-                        ErrorLabel.Text = "This student already borrowed this book.";
-                        ErrorLabel.Visible = true;
+                        MessageBox.Show("This student already borrowed this book!");
+                        ErrorLabel.Text = "This student already borrowed this book."; // standby textbox
+                        ErrorLabel.Visible = false;
                         return true;
                     }
                     else
                     {
                         ErrorLabel.Visible = false;
-                        bookingSubmitBtn.Enabled = true;
                         return false;
                     }
                 }
@@ -342,8 +337,9 @@ namespace LibraryBookSystem
                     if (borrowedCount >= totalQuantity)
                     {
                         ErrorLabel.ForeColor = Color.Red;
-                        ErrorLabel.Text = "This book is currently unavailable (all copies borrowed).";
-                        ErrorLabel.Visible = true;
+                        ErrorLabel.Text = "This book is currently unavailable (all copies borrowed)."; // errorLabel must be use to show errors only
+                        MessageBox.Show("This book is currently unavailable (all copies borrowed).");
+                        ErrorLabel.Visible = false;
 
                         MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                         DialogResult result = MessageBox.Show("Would you like to make a reservations?", "Book Unavailable", buttons);
@@ -361,7 +357,8 @@ namespace LibraryBookSystem
                     {
                         ErrorLabel.ForeColor = Color.Red;
                         ErrorLabel.Text = "This student already borrowed this book!.";
-                        ErrorLabel.Visible = true;
+                        MessageBox.Show("This student already borrowed this book!");
+                        ErrorLabel.Visible = false;
                         return;
                     }
 

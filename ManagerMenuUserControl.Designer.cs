@@ -100,7 +100,7 @@
             this.viewDataBaseTableBtn.TabIndex = 12;
             this.viewDataBaseTableBtn.Text = "View Database Tables";
             this.viewDataBaseTableBtn.UseVisualStyleBackColor = true;
-            this.viewDataBaseTableBtn.Click += new System.EventHandler(this.CreateNewStudentBtn_Click);
+            this.viewDataBaseTableBtn.Click += new System.EventHandler(this.ViewDatabaseTableBtn_Click);
             // 
             // ManagerMenuUserControl
             // 
@@ -116,6 +116,7 @@
             this.MinimumSize = new System.Drawing.Size(890, 555);
             this.Name = "ManagerMenuUserControl";
             this.Size = new System.Drawing.Size(890, 555);
+            this.Load += new System.EventHandler(this.ManagerMenuUserControl_Load);
             this.ResumeLayout(false);
 
         }

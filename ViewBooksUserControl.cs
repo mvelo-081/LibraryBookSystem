@@ -34,6 +34,7 @@ namespace LibraryBookSystem
             fillTable(bookCategoryComboBox.SelectedItem.ToString());
         }
 
+        // overloaded constructor to pass the homepage panel and menu button
         public ViewBooksUserControl(Panel homePagePanel, Button menuBtn)
         {
             InitializeComponent();
@@ -53,10 +54,14 @@ namespace LibraryBookSystem
             fillTable(bookCategoryComboBox.SelectedItem.ToString());
 
         }
+
+        // fikters the database view table , using the characteres that are typed in the bookName textbox
         private void bookNameDataTextChanged(object sender, EventArgs e)
         {
             (dataGridView.DataSource as DataTable).DefaultView.RowFilter = string.Format("Title LIKE '%{0}%'", bookNameData.Text);
         }
+
+        // This fill the table by the associaing table in the database to shoow the corrct format of the table  
         private void fillTable(String option)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -97,12 +102,14 @@ namespace LibraryBookSystem
                 dataGridView.DataSource = table;
             }
         }
+
+        // This event triggers when the user select the a new categpory form the combobox
         private void bookCategoryComboBoxOptionChanged(object sender, EventArgs e)
         {
             fillTable(bookCategoryComboBox.SelectedItem.ToString());
         }
 
-
+        // This fetches the categories that are in the dattbaase and add tehm to the combobox
         private void getCategories()
         {
             String query = "SELECT DISTINCT Book_Category FROM Book";

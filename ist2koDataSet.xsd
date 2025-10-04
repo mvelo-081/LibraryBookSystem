@@ -376,7 +376,7 @@ SELECT StudentID, Student_FName, Student_LName, Student_Email, [Student_Cellphon
               <Mapping SourceColumn="Student_FName" DataSetColumn="Student_FName" />
               <Mapping SourceColumn="Student_LName" DataSetColumn="Student_LName" />
               <Mapping SourceColumn="Student_Email" DataSetColumn="Student_Email" />
-              <Mapping SourceColumn="Student_CellphoneNo." DataSetColumn="Student_CellphoneNo_" />
+              <Mapping SourceColumn="Student_CellphoneNo." DataSetColumn="Student_CellphoneNo" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -508,7 +508,7 @@ SELECT StudentID, Student_FName, Student_LName, Student_Email, [Student_Cellphon
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Student_CellphoneNo_" msprop:Generator_ColumnPropNameInTable="Student_CellphoneNo_Column" msprop:Generator_ColumnPropNameInRow="Student_CellphoneNo_" msprop:Generator_UserColumnName="Student_CellphoneNo_" msprop:Generator_ColumnVarNameInTable="columnStudent_CellphoneNo_">
+              <xs:element name="Student_CellphoneNo" msprop:Generator_ColumnPropNameInTable="Student_CellphoneNoColumn" msprop:Generator_ColumnPropNameInRow="Student_CellphoneNo" msprop:Generator_UserColumnName="Student_CellphoneNo" msprop:Generator_ColumnVarNameInTable="columnStudent_CellphoneNo">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />

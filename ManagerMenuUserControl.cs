@@ -16,6 +16,7 @@ namespace LibraryBookSystem
         public ManagerMenuUserControl(Panel homePagePanel)
         {
             InitializeComponent();
+
             this.homePagePanel = homePagePanel;
         }
 
@@ -46,11 +47,28 @@ namespace LibraryBookSystem
 
         private void availableBooksBtn_Click(object sender, EventArgs e)
         {
+            ManageStaff manageStaff = new ManageStaff();
+            homePagePanel.Controls.Clear();
+            homePagePanel.Controls.Add(manageStaff);
 
         }
 
         private void viewBorrowHistBtn_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void ManagerMenuUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ViewDatabaseTableBtn_Click(object sender, EventArgs e)
+        {
+            homePagePanel.Controls.Clear();
+            ViewDatabase viewDatabase = new ViewDatabase();
+            homePagePanel.Controls.Add(viewDatabase);
+            viewDatabase.Show();
 
         }
     }
