@@ -12,9 +12,12 @@ using System.Windows.Forms;
 
 namespace LibraryBookSystem
 {
+
     public partial class LandingPage : Form
     {
         private Boolean isMananger = false;
+
+        string connectionString = ConfigurationManager.ConnectionStrings["LibraryBookSystem.Properties.Settings.ist2koConnectionString"].ConnectionString;
 
         private Boolean isTestingMode = true; // change this if not in testing mode!
         public LandingPage()
@@ -65,7 +68,7 @@ namespace LibraryBookSystem
             string password = UserPasswordTextData.Text;
             string username = UserIdTextData.Text;
 
-            string connectionString = ConfigurationManager.ConnectionStrings["LibraryBookSystem.Properties.Settings.ist2koConnectionString"].ConnectionString;
+
 
             string query = "SELECT Staff_username, Staff_Password, Staff_Role FROM Staff WHERE Staff_Password = @Password AND Staff_username = @Username";
 
