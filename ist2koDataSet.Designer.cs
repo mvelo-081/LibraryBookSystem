@@ -1752,7 +1752,7 @@ namespace LibraryBookSystem {
             
             private global::System.Data.DataColumn columnStudent_Email;
             
-            private global::System.Data.DataColumn columnStudent_CellphoneNo_;
+            private global::System.Data.DataColumn columnStudent_CellphoneNo;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -1821,9 +1821,9 @@ namespace LibraryBookSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Student_CellphoneNo_Column {
+            public global::System.Data.DataColumn Student_CellphoneNoColumn {
                 get {
-                    return this.columnStudent_CellphoneNo_;
+                    return this.columnStudent_CellphoneNo;
                 }
             }
             
@@ -1864,14 +1864,14 @@ namespace LibraryBookSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public StudentRow AddStudentRow(int StudentID, string Student_FName, string Student_LName, string Student_Email, string Student_CellphoneNo_) {
+            public StudentRow AddStudentRow(int StudentID, string Student_FName, string Student_LName, string Student_Email, string Student_CellphoneNo) {
                 StudentRow rowStudentRow = ((StudentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         StudentID,
                         Student_FName,
                         Student_LName,
                         Student_Email,
-                        Student_CellphoneNo_};
+                        Student_CellphoneNo};
                 rowStudentRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStudentRow);
                 return rowStudentRow;
@@ -1905,7 +1905,7 @@ namespace LibraryBookSystem {
                 this.columnStudent_FName = base.Columns["Student_FName"];
                 this.columnStudent_LName = base.Columns["Student_LName"];
                 this.columnStudent_Email = base.Columns["Student_Email"];
-                this.columnStudent_CellphoneNo_ = base.Columns["Student_CellphoneNo_"];
+                this.columnStudent_CellphoneNo = base.Columns["Student_CellphoneNo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1919,8 +1919,8 @@ namespace LibraryBookSystem {
                 base.Columns.Add(this.columnStudent_LName);
                 this.columnStudent_Email = new global::System.Data.DataColumn("Student_Email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStudent_Email);
-                this.columnStudent_CellphoneNo_ = new global::System.Data.DataColumn("Student_CellphoneNo_", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnStudent_CellphoneNo_);
+                this.columnStudent_CellphoneNo = new global::System.Data.DataColumn("Student_CellphoneNo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStudent_CellphoneNo);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnStudentID}, true));
                 this.columnStudentID.AllowDBNull = false;
@@ -1931,8 +1931,8 @@ namespace LibraryBookSystem {
                 this.columnStudent_LName.MaxLength = 50;
                 this.columnStudent_Email.AllowDBNull = false;
                 this.columnStudent_Email.MaxLength = 50;
-                this.columnStudent_CellphoneNo_.AllowDBNull = false;
-                this.columnStudent_CellphoneNo_.MaxLength = 10;
+                this.columnStudent_CellphoneNo.AllowDBNull = false;
+                this.columnStudent_CellphoneNo.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2432,12 +2432,12 @@ namespace LibraryBookSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Student_CellphoneNo_ {
+            public string Student_CellphoneNo {
                 get {
-                    return ((string)(this[this.tableStudent.Student_CellphoneNo_Column]));
+                    return ((string)(this[this.tableStudent.Student_CellphoneNoColumn]));
                 }
                 set {
-                    this[this.tableStudent.Student_CellphoneNo_Column] = value;
+                    this[this.tableStudent.Student_CellphoneNoColumn] = value;
                 }
             }
         }
@@ -4376,7 +4376,7 @@ SELECT StaffID, Staff_FName, Staff_LName, Staff_Username, Staff_Password, Staff_
             tableMapping.ColumnMappings.Add("Student_FName", "Student_FName");
             tableMapping.ColumnMappings.Add("Student_LName", "Student_LName");
             tableMapping.ColumnMappings.Add("Student_Email", "Student_Email");
-            tableMapping.ColumnMappings.Add("Student_CellphoneNo.", "Student_CellphoneNo_");
+            tableMapping.ColumnMappings.Add("Student_CellphoneNo.", "Student_CellphoneNo");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;

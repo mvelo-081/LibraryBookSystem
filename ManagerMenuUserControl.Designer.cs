@@ -31,7 +31,7 @@
             this.btn6 = new System.Windows.Forms.Button();
             this.btn5 = new System.Windows.Forms.Button();
             this.btn4 = new System.Windows.Forms.Button();
-            this.btn3 = new System.Windows.Forms.Button();
+            this.Statistics = new System.Windows.Forms.Button();
             this.manageLibrartStaffBtn = new System.Windows.Forms.Button();
             this.viewDataBaseTableBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -69,16 +69,16 @@
             this.btn4.UseVisualStyleBackColor = true;
             this.btn4.Click += new System.EventHandler(this.viewBookingsBtn_Click);
             // 
-            // btn3
+            // Statistics
             // 
-            this.btn3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn3.Location = new System.Drawing.Point(617, 79);
-            this.btn3.Name = "btn3";
-            this.btn3.Size = new System.Drawing.Size(177, 153);
-            this.btn3.TabIndex = 14;
-            this.btn3.Text = "View Statistics";
-            this.btn3.UseVisualStyleBackColor = true;
-            this.btn3.Click += new System.EventHandler(this.bookingBtn_Click);
+            this.Statistics.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Statistics.Location = new System.Drawing.Point(617, 79);
+            this.Statistics.Name = "Statistics";
+            this.Statistics.Size = new System.Drawing.Size(177, 153);
+            this.Statistics.TabIndex = 14;
+            this.Statistics.Text = "View Statistics";
+            this.Statistics.UseVisualStyleBackColor = true;
+            this.Statistics.Click += new System.EventHandler(this.bookingBtn_Click);
             // 
             // manageLibrartStaffBtn
             // 
@@ -100,7 +100,7 @@
             this.viewDataBaseTableBtn.TabIndex = 12;
             this.viewDataBaseTableBtn.Text = "View Database Tables";
             this.viewDataBaseTableBtn.UseVisualStyleBackColor = true;
-            this.viewDataBaseTableBtn.Click += new System.EventHandler(this.CreateNewStudentBtn_Click);
+            this.viewDataBaseTableBtn.Click += new System.EventHandler(this.ViewDatabaseTableBtn_Click);
             // 
             // ManagerMenuUserControl
             // 
@@ -109,13 +109,14 @@
             this.Controls.Add(this.btn6);
             this.Controls.Add(this.btn5);
             this.Controls.Add(this.btn4);
-            this.Controls.Add(this.btn3);
+            this.Controls.Add(this.Statistics);
             this.Controls.Add(this.manageLibrartStaffBtn);
             this.Controls.Add(this.viewDataBaseTableBtn);
             this.MaximumSize = new System.Drawing.Size(890, 555);
             this.MinimumSize = new System.Drawing.Size(890, 555);
             this.Name = "ManagerMenuUserControl";
             this.Size = new System.Drawing.Size(890, 555);
+            this.Load += new System.EventHandler(this.ManagerMenuUserControl_Load);
             this.ResumeLayout(false);
 
         }
@@ -125,7 +126,7 @@
         private System.Windows.Forms.Button btn6;
         private System.Windows.Forms.Button btn5;
         private System.Windows.Forms.Button btn4;
-        private System.Windows.Forms.Button btn3;
+        private System.Windows.Forms.Button Statistics;
         private System.Windows.Forms.Button manageLibrartStaffBtn;
         private System.Windows.Forms.Button viewDataBaseTableBtn;
     }

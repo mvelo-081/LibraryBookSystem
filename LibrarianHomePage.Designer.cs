@@ -124,6 +124,7 @@
             this.MinimumSize = new System.Drawing.Size(1190, 705);
             this.Name = "LibrarianHomePage";
             this.Size = new System.Drawing.Size(1190, 705);
+            this.Load += new System.EventHandler(this.LibrarianHomePage_Load);
             this.navPanel.ResumeLayout(false);
             this.navPanel.PerformLayout();
             this.ResumeLayout(false);

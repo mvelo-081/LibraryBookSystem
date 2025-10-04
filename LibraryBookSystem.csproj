@@ -281,8 +281,14 @@
     <EmbeddedResource Include="ViewBooksUserControl.resx">
       <DependentUpon>ViewBooksUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewDatabase.resx">
+      <DependentUpon>ViewDatabase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewReservationUserControl.resx">
       <DependentUpon>ViewReservationUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewStatistics.resx">
+      <DependentUpon>ViewStatistics.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ist2jyDataSet.xsc">
       <DependentUpon>ist2jyDataSet.xsd</DependentUpon>
