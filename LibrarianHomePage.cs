@@ -83,6 +83,11 @@ namespace LibraryBookSystem
         {
 
         }
+
+        private void LibrarianHomePage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

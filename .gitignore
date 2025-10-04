@@ -1,0 +1,60 @@
+
+##############################
+# Visual Studio / .NET Ignore
+##############################
+
+# Build results
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+*.exe
+*.dll
+*.app
+*.appx
+*.pdb
+*.cache
+*.tmp
+*.log
+
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# NuGet
+packages/
+*.nupkg
+project.lock.json
+project.assets.json
+
+# Resharper / Rider / Other IDEs
+_ReSharper*/
+*.DotSettings.user
+.idea/
+
+# Test results
+TestResults/
+*.coverage
+*.coveragexml
+
+# Others
+*.dbmdl
+*.bak
+*.backup
+*.mdf
+*.ldf
+
+# Publish files
+*.Publish.xml
+publish/
+
+##############################
+# End of Ignore File
+##############################

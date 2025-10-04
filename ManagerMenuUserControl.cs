@@ -12,14 +12,15 @@ namespace LibraryBookSystem
 {
     public partial class ManagerMenuUserControl : UserControl
     {
-        public ManagerMenuUserControl()
+
+        Panel homePagePanel;
+        public ManagerMenuUserControl(Panel homePagePanel)
+            
         {
             InitializeComponent();
-        }
 
-        private void CreateNewStudentBtn_Click(object sender, EventArgs e)
-        {
-
+            this.homePagePanel = homePagePanel;
+           
         }
 
         private void returnedBookBtn_Click(object sender, EventArgs e)
@@ -44,6 +45,20 @@ namespace LibraryBookSystem
 
         private void viewBorrowHistBtn_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void ManagerMenuUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ViewDatabaseTableBtn_Click(object sender, EventArgs e)
+        {
+            homePagePanel.Controls.Clear();
+            ViewDatabase viewDatabase = new ViewDatabase();
+            homePagePanel.Controls.Add(viewDatabase);
+            viewDatabase.Show();
 
         }
     }

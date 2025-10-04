@@ -98,6 +98,7 @@
             this.homePagePanel.Name = "homePagePanel";
             this.homePagePanel.Size = new System.Drawing.Size(890, 555);
             this.homePagePanel.TabIndex = 5;
+            
             // 
             // ManagerHomePage
             // 

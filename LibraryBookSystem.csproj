@@ -202,6 +202,12 @@
     <Compile Include="ViewBooksUserControl.Designer.cs">
       <DependentUpon>ViewBooksUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewDatabase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewDatabase.Designer.cs">
+      <DependentUpon>ViewDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewReservationUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -249,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewBooksUserControl.resx">
       <DependentUpon>ViewBooksUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewDatabase.resx">
+      <DependentUpon>ViewDatabase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewReservationUserControl.resx">
       <DependentUpon>ViewReservationUserControl.cs</DependentUpon>

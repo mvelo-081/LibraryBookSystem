@@ -22,7 +22,7 @@ namespace LibraryBookSystem
 
 
             // initially have the menu
-            switchUserControl(new ManagerMenuUserControl());
+            switchUserControl(new ManagerMenuUserControl(homePagePanel));
 
         }
 
@@ -34,6 +34,7 @@ namespace LibraryBookSystem
             //homePagePanel.Dock = DockStyle.Fill;
 
             homePagePanel.Controls.Add(userControl);
+           
         }
 
         private void handleMenuBtn(object sender, EventArgs e)
@@ -58,5 +59,7 @@ namespace LibraryBookSystem
 
             this.FindForm().Hide(); // corret this, it kills ram ...
         }
+
+        
     }
 }
