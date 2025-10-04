@@ -12,9 +12,11 @@ namespace LibraryBookSystem
 {
     public partial class ManagerMenuUserControl : UserControl
     {
-        public ManagerMenuUserControl()
+        Panel homePagePanel;
+        public ManagerMenuUserControl(Panel homePagePanel)
         {
             InitializeComponent();
+            this.homePagePanel = homePagePanel;
         }
 
         private void CreateNewStudentBtn_Click(object sender, EventArgs e)
@@ -34,7 +36,12 @@ namespace LibraryBookSystem
 
         private void bookingBtn_Click(object sender, EventArgs e)
         {
+            homePagePanel.Controls.Clear();
+            ViewStatistics view = new ViewStatistics();
+            homePagePanel.Controls.Add(view);
+            view.Show();
 
+            
         }
 
         private void availableBooksBtn_Click(object sender, EventArgs e)

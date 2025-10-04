@@ -208,6 +208,12 @@
     <Compile Include="ViewReservationUserControl.Designer.cs">
       <DependentUpon>ViewReservationUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewStatistics.Designer.cs">
+      <DependentUpon>ViewStatistics.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="bookingsUserControl.resx">
       <DependentUpon>bookingsUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewReservationUserControl.resx">
       <DependentUpon>ViewReservationUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewStatistics.resx">
+      <DependentUpon>ViewStatistics.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ist2jyDataSet.xsc">
       <DependentUpon>ist2jyDataSet.xsd</DependentUpon>

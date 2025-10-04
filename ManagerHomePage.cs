@@ -22,7 +22,7 @@ namespace LibraryBookSystem
 
 
             // initially have the menu
-            switchUserControl(new ManagerMenuUserControl());
+            switchUserControl(new ManagerMenuUserControl(homePagePanel));
 
         }
 
