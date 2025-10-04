@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Net.Http;
 using Twilio.Rest.Api.V2010.Account;
+using System.Configuration;
 
 namespace LibraryBookSystem
 {
@@ -21,7 +22,7 @@ namespace LibraryBookSystem
     {
         String studentID = "";
 
-        string connectionString = "Data Source=143.128.146.30\\istn2;Initial Catalog=ist2ko;Persist Security Info=True;User ID=ist2ko;Password=jioeox;Encrypt=True;TrustServerCertificate=True";
+        string connectionString = ConfigurationManager.ConnectionStrings["LibraryBookSystem.Properties.Settings.ist2koConnectionString"].ConnectionString;
 
         private Panel homePagePanel;
 
@@ -45,26 +46,30 @@ namespace LibraryBookSystem
 
             studentnameSurnameTextData.Text = "";
 
-            fetchBookListBtn.Click += handlefetchBookListBtn;
-
             BookCombBox.Items.Add("-- None --");
 
             BookCombBox.SelectedIndex = 0;
 
             CancelBtn.Click += handleCancelBtn;
 
+            // just handles the getBook list form the data base
+            studentEmailData.LostFocus += (s, e) => {
+                getBookNameList();
+            };
+
         }
+
+        // Handle cancel button click event
         private void handleCancelBtn(object sender, EventArgs e)
         {
             menuBtn.Visible = false;
             homePagePanel.Controls.Clear();
 
             homePagePanel.Controls.Add(new MenuUserControl(homePagePanel, menuBtn));
+
         }
-        private void handlefetchBookListBtn(object sender, EventArgs e)
-        {
-            getBookNameList();
-        }
+
+        // fetches the book names that are borrrowed by the user
         private void getBookNameList()
         {
             BookCombBox.Items.Clear();
@@ -89,7 +94,7 @@ namespace LibraryBookSystem
                 {
                     ErrorLabel.Text = "Books fetched successfully.";
                     ErrorLabel.ForeColor = Color.Green;
-                    ErrorLabel.Visible = true;
+                    ErrorLabel.Visible = false; // Dont think we must show this.
                 }
                 else
                 {
@@ -100,6 +105,8 @@ namespace LibraryBookSystem
                 connection.Close();
             }
         }
+
+
         private void fillStudentNamesAndSurname(object sender, EventArgs e)
         {
             ErrorLabel.Visible = false;
@@ -228,7 +235,7 @@ namespace LibraryBookSystem
         async private void NotifyEarliestReservedStuden() { 
             String boookTitle = BookCombBox.SelectedItem.ToString();
 
-            String query = "SELECT TOP(1) * FROM Student WHERE Student.StudentID = ( SELECT TOP(1) Reservation.StudentID FROM Reservation WHERE Reservation.BookID = (SELECT BookID FROM Book WHERE Book_Title = @Book_Title) ORDER BY Reservation.Reserved_Date ASC, Reservation.ReservationID ASC )";
+            String query = "SELECT TOP(1) * FROM Student WHERE Student.StudentID = ( SELECT TOP(1) Reservation.StudentID FROM Reservation WHERE Reservation.Reservation_status = 'Pending' AND Reservation.BookID = (SELECT BookID FROM Book WHERE Book_Title = @Book_Title) ORDER BY Reservation.Reserved_Date ASC, Reservation.ReservationID ASC )";
 
 
             String studentEmail = "";

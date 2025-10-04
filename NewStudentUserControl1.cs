@@ -31,13 +31,14 @@ namespace LibraryBookSystem
 
             cancelBtn.Click += handleCancelBtn;
 
-            newStudentBtn.Click += handleNewStudentBtn;
+
         }
+
 
         private void handleCancelBtn(object sender, EventArgs e)
         {
             menuBtn.Visible = false;
-            
+                        
             homePagePanel.Controls.Clear();
 
             homePagePanel.Controls.Add(new MenuUserControl(homePagePanel, menuBtn));
@@ -153,7 +154,6 @@ namespace LibraryBookSystem
                     }
                 }
             }
-            
         }
     }
 }
