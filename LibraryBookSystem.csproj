@@ -170,6 +170,12 @@
     <Compile Include="ManagerMenuUserControl.Designer.cs">
       <DependentUpon>ManagerMenuUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManageStaff.Designer.cs">
+      <DependentUpon>ManageStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerMenuUserControl.resx">
       <DependentUpon>ManagerMenuUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageStaff.resx">
+      <DependentUpon>ManageStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuUserControl.resx">
       <DependentUpon>MenuUserControl.cs</DependentUpon>

@@ -57,7 +57,7 @@ namespace LibraryBookSystem
             {
                 LandingPageMainPanel.Controls.Clear();
                 LandingPageMainPanel.Dock = DockStyle.Fill;
-                LibrarianHomePage homePage = new LibrarianHomePage();
+                ManagerHomePage homePage = new ManagerHomePage();
                 LandingPageMainPanel.Controls.Add(homePage);
                 return;
             }
