@@ -74,7 +74,7 @@ SELECT BookID, Book_Title, Book_Author, Book_Category, Book_Quantity, Availabili
               <Mapping SourceColumn="Availability_Status" DataSetColumn="Availability_Status" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="ist2koConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AddNewBook" Modifier="Public" Name="AddNewBook" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="AddNewBook">
+              <DbSource ConnectionRef="ist2koConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AddNewBook" Modifier="Public" Name="AddNewBook" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AddNewBook">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[Book] ( [Book_Title], [Book_Author], [Book_Category], [Book_Quantity], [Availability_Status]) VALUES (@Book_Title, @Book_Author, @Book_Category, @Book_Quantity, @Availability_Status);
@@ -89,7 +89,7 @@ SELECT BookID, Book_Title, Book_Author, Book_Category, Book_Quantity, Availabili
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="ist2koConnectionString (Settings)" DbObjectName="ist2ko.dbo.Book" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+              <DbSource ConnectionRef="ist2koConnectionString (Settings)" DbObjectName="ist2ko.dbo.Book" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT BookID, Book_Title, Book_Author, Book_Category, Book_Quantity, Availability_Status FROM dbo.Book</CommandText>
@@ -97,7 +97,7 @@ SELECT BookID, Book_Title, Book_Author, Book_Category, Book_Quantity, Availabili
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="ist2koConnectionString (Settings)" DbObjectName="ist2ko.dbo.Book" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy1">
+              <DbSource ConnectionRef="ist2koConnectionString (Settings)" DbObjectName="ist2ko.dbo.Book" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillBy1">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT BookID, Book_Title, Book_Author, Book_Category, Book_Quantity, Availability_Status FROM dbo.Book</CommandText>
@@ -105,7 +105,7 @@ SELECT BookID, Book_Title, Book_Author, Book_Category, Book_Quantity, Availabili
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="ist2koConnectionString (Settings)" DbObjectName="ist2ko.dbo.Book" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillBy2">
+              <DbSource ConnectionRef="ist2koConnectionString (Settings)" DbObjectName="ist2ko.dbo.Book" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillBy2">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT BookID, Book_Title, Book_Author, Book_Category, Book_Quantity, Availability_Status FROM dbo.Book</CommandText>
@@ -186,6 +186,23 @@ SELECT BorrowID, StudentID, BookID, Borrow_Date, Due_Date, Return_Date FROM Borr
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT BorrowID, StudentID, BookID, Borrow_Date, Due_Date, Return_Date FROM dbo.Borrow</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ist2koConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByOverDueBookings" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByOverDueBookings" GeneratorSourceName="FillByOverDueBookings" GetMethodModifier="Public" GetMethodName="GetDataByOverDueBookings" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByOverDueBookings" UserSourceName="FillByOverDueBookings">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT 
+    Student.Student_email as [Student email],
+    (Student.Student_FName + Student.Student_Lname) as [name and surname],
+    Borrow.BookID as [Borrow ID],
+    Borrow.Due_date as [Due date]
+FROM Borrow
+INNER JOIN Student ON Borrow.StudentID = Student.StudentID
+WHERE GETDATE() &gt; Borrow.Due_date
+ AND Borrow.Return_date IS NULL;
+</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>

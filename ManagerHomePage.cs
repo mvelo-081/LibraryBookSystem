@@ -16,13 +16,13 @@ namespace LibraryBookSystem
         {
             InitializeComponent();
 
-            menuBtn.Click += handleMenuBtn;
+            manMenuBtn.Click += handleMenuBtn;
 
             signoutBtn.Click += handleSignoutBtn;
 
 
             // initially have the menu
-            switchUserControl(new ManagerMenuUserControl(homePagePanel));
+            switchUserControl(new ManagerMenuUserControl(homePagePanel, manMenuBtn));
 
         }
 
@@ -39,9 +39,9 @@ namespace LibraryBookSystem
 
         private void handleMenuBtn(object sender, EventArgs e)
         {
-            switchUserControl(new MenuUserControl(homePagePanel, menuBtn));
+            switchUserControl(new MenuUserControl(homePagePanel, manMenuBtn));
 
-            menuBtn.Visible = false;
+            manMenuBtn.Visible = false;
         }
 
         private async void handleSignoutBtn(object sender, EventArgs e)

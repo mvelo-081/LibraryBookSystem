@@ -13,11 +13,15 @@ namespace LibraryBookSystem
     public partial class AddNewBook : UserControl
     {
         private Panel homePagePanel;
-        public AddNewBook(Panel homePagePanel)
+
+        private Button menuBtn;
+        public AddNewBook(Panel homePagePanel, Button menuBtn)
         {
             InitializeComponent();
 
             this.homePagePanel = homePagePanel;
+
+            this.menuBtn = menuBtn;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -35,7 +39,7 @@ namespace LibraryBookSystem
         private void button2_Click(object sender, EventArgs e)
         {
             homePagePanel.Controls.Clear();
-            homePagePanel.Controls.Add(new ManagerMenuUserControl(homePagePanel));
+            homePagePanel.Controls.Add(new ManagerMenuUserControl(homePagePanel, menuBtn));
         }
     }
 }

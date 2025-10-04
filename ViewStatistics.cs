@@ -12,9 +12,16 @@ namespace LibraryBookSystem
 {
     public partial class ViewStatistics : UserControl
     {
-        public ViewStatistics()
+        private Panel homePagePanel;
+
+        private Button menuBtn;
+        public ViewStatistics(Panel homePagePanel, Button menuBtn)
         {
             InitializeComponent();
+
+            this.homePagePanel = homePagePanel;
+
+            this.menuBtn = menuBtn;
         }
     }
 }

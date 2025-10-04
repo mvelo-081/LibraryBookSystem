@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btn6 = new System.Windows.Forms.Button();
-            this.btn5 = new System.Windows.Forms.Button();
+            this.OverDuebtn = new System.Windows.Forms.Button();
             this.btn4 = new System.Windows.Forms.Button();
             this.Statistics = new System.Windows.Forms.Button();
             this.manageLibrartStaffBtn = new System.Windows.Forms.Button();
@@ -47,16 +47,16 @@
             this.btn6.UseVisualStyleBackColor = true;
             this.btn6.Click += new System.EventHandler(this.viewBorrowHistBtn_Click);
             // 
-            // btn5
+            // OverDuebtn
             // 
-            this.btn5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn5.Location = new System.Drawing.Point(350, 338);
-            this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(177, 153);
-            this.btn5.TabIndex = 16;
-            this.btn5.Text = "View overdue returns";
-            this.btn5.UseVisualStyleBackColor = true;
-            this.btn5.Click += new System.EventHandler(this.returnedBookBtn_Click);
+            this.OverDuebtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OverDuebtn.Location = new System.Drawing.Point(350, 338);
+            this.OverDuebtn.Name = "OverDuebtn";
+            this.OverDuebtn.Size = new System.Drawing.Size(177, 153);
+            this.OverDuebtn.TabIndex = 16;
+            this.OverDuebtn.Text = "View overdue returns";
+            this.OverDuebtn.UseVisualStyleBackColor = true;
+            this.OverDuebtn.Click += new System.EventHandler(this.returnedBookBtn_Click);
             // 
             // btn4
             // 
@@ -107,7 +107,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btn6);
-            this.Controls.Add(this.btn5);
+            this.Controls.Add(this.OverDuebtn);
             this.Controls.Add(this.btn4);
             this.Controls.Add(this.Statistics);
             this.Controls.Add(this.manageLibrartStaffBtn);
@@ -124,7 +124,7 @@
         #endregion
 
         private System.Windows.Forms.Button btn6;
-        private System.Windows.Forms.Button btn5;
+        private System.Windows.Forms.Button OverDuebtn;
         private System.Windows.Forms.Button btn4;
         private System.Windows.Forms.Button Statistics;
         private System.Windows.Forms.Button manageLibrartStaffBtn;

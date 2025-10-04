@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerHomePage));
             this.navPanel = new System.Windows.Forms.Panel();
-            this.menuBtn = new System.Windows.Forms.Button();
+            this.manMenuBtn = new System.Windows.Forms.Button();
             this.signoutBtn = new System.Windows.Forms.Button();
             this.IconLabel = new System.Windows.Forms.Label();
             this.IconImgPanel = new System.Windows.Forms.Panel();
@@ -41,7 +41,7 @@
             // navPanel
             // 
             this.navPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.navPanel.Controls.Add(this.menuBtn);
+            this.navPanel.Controls.Add(this.manMenuBtn);
             this.navPanel.Controls.Add(this.signoutBtn);
             this.navPanel.Controls.Add(this.IconLabel);
             this.navPanel.Controls.Add(this.IconImgPanel);
@@ -50,16 +50,16 @@
             this.navPanel.Size = new System.Drawing.Size(1148, 62);
             this.navPanel.TabIndex = 2;
             // 
-            // menuBtn
+            // manMenuBtn
             // 
-            this.menuBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuBtn.Location = new System.Drawing.Point(827, 13);
-            this.menuBtn.Name = "menuBtn";
-            this.menuBtn.Size = new System.Drawing.Size(155, 35);
-            this.menuBtn.TabIndex = 3;
-            this.menuBtn.Text = "Menu";
-            this.menuBtn.UseVisualStyleBackColor = true;
-            this.menuBtn.Visible = false;
+            this.manMenuBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manMenuBtn.Location = new System.Drawing.Point(827, 13);
+            this.manMenuBtn.Name = "manMenuBtn";
+            this.manMenuBtn.Size = new System.Drawing.Size(155, 35);
+            this.manMenuBtn.TabIndex = 3;
+            this.manMenuBtn.Text = "Menu";
+            this.manMenuBtn.UseVisualStyleBackColor = true;
+            this.manMenuBtn.Visible = false;
             // 
             // signoutBtn
             // 
@@ -98,7 +98,6 @@
             this.homePagePanel.Name = "homePagePanel";
             this.homePagePanel.Size = new System.Drawing.Size(890, 555);
             this.homePagePanel.TabIndex = 5;
-            
             // 
             // ManagerHomePage
             // 
@@ -119,7 +118,7 @@
         #endregion
 
         private System.Windows.Forms.Panel navPanel;
-        private System.Windows.Forms.Button menuBtn;
+        private System.Windows.Forms.Button manMenuBtn;
         private System.Windows.Forms.Button signoutBtn;
         private System.Windows.Forms.Label IconLabel;
         private System.Windows.Forms.Panel IconImgPanel;

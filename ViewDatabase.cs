@@ -1,84 +1,92 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LibraryBookSystem
 {
     public partial class ViewDatabase : UserControl
     {
+        private Panel homePagePanel;
 
-        ist2koDataSetTableAdapters.BorrowTableAdapter borrowTableAdapter = new ist2koDataSetTableAdapters.BorrowTableAdapter();
-        ist2koDataSetTableAdapters.ReservationTableAdapter reservationTableAdapter = new ist2koDataSetTableAdapters.ReservationTableAdapter();
-        ist2koDataSetTableAdapters.StudentTableAdapter studentTableAdapter = new ist2koDataSetTableAdapters.StudentTableAdapter();
-        ist2koDataSetTableAdapters.StaffTableAdapter staffTableAdapter = new ist2koDataSetTableAdapters.StaffTableAdapter();
-        ist2koDataSetTableAdapters.BookTableAdapter bookTableAdapter = new ist2koDataSetTableAdapters.BookTableAdapter();
-
-        public ViewDatabase()
+        private Button menuBtn; 
+        public ViewDatabase(Panel homePagePanel, Button menuBtn)
         {
             InitializeComponent();
-            LoadTableName();
+
+            this.homePagePanel = homePagePanel;
+
+            this.menuBtn = menuBtn;
+
+            string[] options = { "Borrow table", "Student table", "Reservation table", "Books table", "Staff table" };
+            comboBox1.Items.AddRange(options);
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
         }
 
         private void ViewDatabase_Load(object sender, EventArgs e)
         {
-
+            // Optional: load a default table when control loads
+            comboBox1.SelectedIndex = 0;
         }
-        public void LoadTableName()
+
+        private void bookBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            comboBox1.Items.Clear();
-            foreach (DataTable table in this.ist2koDataSet.Tables)
-            {
-                comboBox1.Items.Add(table.TableName);
-            }
+            this.Validate();
+            this.bookBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.ist2koDataSet);
         }
 
+        // When user changes the selected option
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedTable = comboBox1.SelectedItem.ToString();
-            DataTable tableToDisplay = null;
-            switch (selectedTable)
-            {
-                case "Staff":
-                    this.staffTableAdapter.Fill(ist2koDataSet.Staff);
-                    tableToDisplay = ist2koDataSet.Staff.Copy();
-                    break;
-                case "Student":
-                    this.studentTableAdapter.Fill(ist2koDataSet.Student);
-                    tableToDisplay = ist2koDataSet.Student.Copy();
-                    break;
-                case "Borrow":
-                    this.borrowTableAdapter.Fill(ist2koDataSet.Borrow);
-                    tableToDisplay = ist2koDataSet.Borrow.Copy();
-                    break;
-                case "Reservation":
-                    this.reservationTableAdapter.Fill(ist2koDataSet.Reservation);
-                    tableToDisplay = ist2koDataSet.Reservation.Copy();
-                    break;
-                case "Books":
-                    this.bookTableAdapter.Fill(ist2koDataSet.Book);
-                    tableToDisplay = ist2koDataSet.Book.Copy();
-                    break;
+            string selected = comboBox1.SelectedItem.ToString();
 
+            // Clear old data
+            dataGridView1.DataSource = null;
 
-            }
-            if (tableToDisplay != null)
+            try
             {
-                dataGridView1.DataSource = tableToDisplay;
+                switch (selected)
+                {
+                    case "Books table":
+                        var booksAdapter = new ist2koDataSetTableAdapters.BookTableAdapter();
+                        var booksTable = new ist2koDataSet.BookDataTable();
+                        booksAdapter.Fill(booksTable);
+                        dataGridView1.DataSource = booksTable;
+                        break;
+
+                    case "Student table":
+                        var studentAdapter = new ist2koDataSetTableAdapters.StudentTableAdapter();
+                        var studentTable = new ist2koDataSet.StudentDataTable();
+                        studentAdapter.Fill(studentTable);
+                        dataGridView1.DataSource = studentTable;
+                        break;
+
+                    case "Reservation table":
+                        var reservationAdapter = new ist2koDataSetTableAdapters.ReservationTableAdapter();
+                        var reservationTable = new ist2koDataSet.ReservationDataTable();
+                        reservationAdapter.Fill(reservationTable);
+                        dataGridView1.DataSource = reservationTable;
+                        break;
+
+                    case "Borrow table":
+                        var borrowAdapter = new ist2koDataSetTableAdapters.BorrowTableAdapter();
+                        var borrowTable = new ist2koDataSet.BorrowDataTable();
+                        borrowAdapter.Fill(borrowTable);
+                        dataGridView1.DataSource = borrowTable;
+                        break;
+
+                    case "Staff table":
+                        var staffAdapter = new ist2koDataSetTableAdapters.StaffTableAdapter();
+                        var staffTable = new ist2koDataSet.StaffDataTable();
+                        staffAdapter.Fill(staffTable);
+                        dataGridView1.DataSource = staffTable;
+                        break;
+                }
             }
-            if (dataGridView1.Columns.Contains("Staff_ID"))
+            catch (Exception ex)
             {
-                dataGridView1.Columns["Staff_ID"].Visible = false;
+                MessageBox.Show("Error loading data!");
             }
-            dataGridView1.AutoResizeColumns();
-            dataGridView1.AutoResizeRows();
-            dataGridView1.Width =dataGridView1.PreferredSize.Width;
-            dataGridView1.Height = dataGridView1.PreferredSize.Height;
         }
     }
 }
+

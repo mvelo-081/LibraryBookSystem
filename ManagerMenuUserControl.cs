@@ -13,45 +13,49 @@ namespace LibraryBookSystem
     public partial class ManagerMenuUserControl : UserControl
     {
         Panel homePagePanel;
-        public ManagerMenuUserControl(Panel homePagePanel)
+
+        private Button menuBtn;
+        public ManagerMenuUserControl(Panel homePagePanel, Button menuBtn)
         {
             InitializeComponent();
 
             this.homePagePanel = homePagePanel;
+
+            this.menuBtn = menuBtn;
         }
 
         private void CreateNewStudentBtn_Click(object sender, EventArgs e)
         {
 
         }
+        private void switchUserControl(UserControl userControl)
+        {
+            homePagePanel.Controls.Clear();
+
+            homePagePanel.Controls.Add(userControl);
+
+            menuBtn.Visible = true;
+        }
 
         private void returnedBookBtn_Click(object sender, EventArgs e)
         {
-
+            switchUserControl(new OverdueBookings(homePagePanel));
+            
         }
 
         private void viewBookingsBtn_Click(object sender, EventArgs e)
         {
-            AddNewBook newBook = new AddNewBook(homePagePanel);
-            homePagePanel.Controls.Clear();
-            homePagePanel.Controls.Add(newBook);
+            switchUserControl(new AddNewBook(homePagePanel, menuBtn));
         }
 
         private void bookingBtn_Click(object sender, EventArgs e)
         {
-            homePagePanel.Controls.Clear();
-            ViewStatistics view = new ViewStatistics();
-            homePagePanel.Controls.Add(view);
-            view.Show();
-
-            
+            switchUserControl(new ViewStatistics(homePagePanel, menuBtn));
         }
 
         private void availableBooksBtn_Click(object sender, EventArgs e)
         {
-            ManageStaff manageStaff = new ManageStaff();
-            homePagePanel.Controls.Clear();
-            homePagePanel.Controls.Add(manageStaff);
+            switchUserControl(new ManageStaff(homePagePanel, menuBtn));
 
         }
 
@@ -67,11 +71,7 @@ namespace LibraryBookSystem
 
         private void ViewDatabaseTableBtn_Click(object sender, EventArgs e)
         {
-            homePagePanel.Controls.Clear();
-            ViewDatabase viewDatabase = new ViewDatabase();
-            homePagePanel.Controls.Add(viewDatabase);
-            viewDatabase.Show();
-
+            switchUserControl(new ViewDatabase(homePagePanel, menuBtn));
         }
     }
 }

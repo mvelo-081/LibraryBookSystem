@@ -12,11 +12,16 @@ namespace LibraryBookSystem
 {
     public partial class ManageStaff : UserControl
     {
-        public ManageStaff()
+        private Panel homePagePanel;
+
+        private Button menuBtn;
+        public ManageStaff(Panel homePagePanel, Button menuBtn)
         {
             InitializeComponent();
 
+            this.homePagePanel = homePagePanel;
 
+            this.menuBtn = menuBtn;
             //bindingNavigatorAddNewItem.PerformClick();
         }
 
