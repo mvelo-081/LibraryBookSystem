@@ -32,7 +32,9 @@ namespace LibraryBookSystem
 
         private void viewBookingsBtn_Click(object sender, EventArgs e)
         {
-
+            AddNewBook newBook = new AddNewBook(homePagePanel);
+            homePagePanel.Controls.Clear();
+            homePagePanel.Controls.Add(newBook);
         }
 
         private void bookingBtn_Click(object sender, EventArgs e)

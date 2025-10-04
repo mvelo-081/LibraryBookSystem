@@ -117,6 +117,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNewBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddNewBook.Designer.cs">
+      <DependentUpon>AddNewBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="bookingsUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -209,12 +215,27 @@
     <Compile Include="ViewBooksUserControl.Designer.cs">
       <DependentUpon>ViewBooksUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewDatabase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewDatabase.Designer.cs">
+      <DependentUpon>ViewDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewReservationUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ViewReservationUserControl.Designer.cs">
       <DependentUpon>ViewReservationUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewStatistics.Designer.cs">
+      <DependentUpon>ViewStatistics.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddNewBook.resx">
+      <DependentUpon>AddNewBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="bookingsUserControl.resx">
       <DependentUpon>bookingsUserControl.cs</DependentUpon>
     </EmbeddedResource>

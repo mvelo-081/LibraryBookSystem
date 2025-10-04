@@ -19,7 +19,7 @@ namespace LibraryBookSystem
 
         string connectionString = ConfigurationManager.ConnectionStrings["LibraryBookSystem.Properties.Settings.ist2koConnectionString"].ConnectionString;
 
-        private Boolean isTestingMode = true; // change this if not in testing mode!
+        private Boolean isTestingMode = false; // change this if not in testing mode!
         public LandingPage()
         {
             InitializeComponent();
