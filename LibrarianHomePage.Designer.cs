@@ -106,6 +106,7 @@
             // 
             // homePagePanel
             // 
+            this.homePagePanel.BackColor = System.Drawing.Color.Transparent;
             this.homePagePanel.Location = new System.Drawing.Point(175, 105);
             this.homePagePanel.MaximumSize = new System.Drawing.Size(890, 555);
             this.homePagePanel.MinimumSize = new System.Drawing.Size(890, 555);
@@ -117,6 +118,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.Controls.Add(this.homePagePanel);
             this.Controls.Add(this.navPanel);
             this.DoubleBuffered = true;

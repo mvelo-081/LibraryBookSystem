@@ -14,14 +14,14 @@ namespace LibraryBookSystem
     {
         Panel homePagePanel;
 
-        private Button menuBtn;
-        public ManagerMenuUserControl(Panel homePagePanel, Button menuBtn)
+        private Button manMenuBtn;
+        public ManagerMenuUserControl(Panel homePagePanel, Button manMenuBtn)
         {
             InitializeComponent();
 
             this.homePagePanel = homePagePanel;
 
-            this.menuBtn = menuBtn;
+            this.manMenuBtn = manMenuBtn;
         }
 
         private void CreateNewStudentBtn_Click(object sender, EventArgs e)
@@ -32,9 +32,11 @@ namespace LibraryBookSystem
         {
             homePagePanel.Controls.Clear();
 
+            userControl.BackColor = Color.Transparent;
+
             homePagePanel.Controls.Add(userControl);
 
-            menuBtn.Visible = true;
+            manMenuBtn.Visible = true;
         }
 
         private void returnedBookBtn_Click(object sender, EventArgs e)
@@ -45,17 +47,17 @@ namespace LibraryBookSystem
 
         private void viewBookingsBtn_Click(object sender, EventArgs e)
         {
-            switchUserControl(new AddNewBook(homePagePanel, menuBtn));
+            switchUserControl(new AddNewBook(homePagePanel, manMenuBtn));
         }
 
         private void bookingBtn_Click(object sender, EventArgs e)
         {
-            switchUserControl(new ViewStatistics(homePagePanel, menuBtn));
+            //switchUserControl(new ViewStatistics(homePagePanel, manMenuBtn));
         }
 
         private void availableBooksBtn_Click(object sender, EventArgs e)
         {
-            switchUserControl(new ManageStaff(homePagePanel, menuBtn));
+            switchUserControl(new ManageStaff(homePagePanel, manMenuBtn));
 
         }
 
@@ -71,7 +73,7 @@ namespace LibraryBookSystem
 
         private void ViewDatabaseTableBtn_Click(object sender, EventArgs e)
         {
-            switchUserControl(new ViewDatabase(homePagePanel, menuBtn));
+            switchUserControl(new ViewDatabase(homePagePanel, manMenuBtn));
         }
     }
 }

@@ -66,6 +66,8 @@ namespace LibraryBookSystem
 
             homePagePanel.Controls.Clear();
 
+            userControl.BackColor = Color.Transparent;
+
             homePagePanel.Controls.Add(userControl);
         }
         private void handleBookingBtn(object sender, EventArgs e)

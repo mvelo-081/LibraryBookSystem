@@ -133,6 +133,7 @@
             // 
             // signInBtn
             // 
+            this.signInBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.signInBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signInBtn.Location = new System.Drawing.Point(385, 448);
             this.signInBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -199,6 +200,9 @@
             // LandingPageMainPanel
             // 
             this.LandingPageMainPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LandingPageMainPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.LandingPageMainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LandingPageMainPanel.BackgroundImage")));
+            this.LandingPageMainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.LandingPageMainPanel.Controls.Add(this.ErrorLabel);
             this.LandingPageMainPanel.Controls.Add(this.navPanel);
             this.LandingPageMainPanel.Controls.Add(this.subWelcomeLabel);
@@ -208,11 +212,11 @@
             this.LandingPageMainPanel.Controls.Add(this.UserIdTextData);
             this.LandingPageMainPanel.Controls.Add(this.roleLabel);
             this.LandingPageMainPanel.Controls.Add(this.welcomeLabel);
-            this.LandingPageMainPanel.Location = new System.Drawing.Point(1, 1);
+            this.LandingPageMainPanel.Location = new System.Drawing.Point(2, 2);
             this.LandingPageMainPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LandingPageMainPanel.MinimumSize = new System.Drawing.Size(1173, 661);
             this.LandingPageMainPanel.Name = "LandingPageMainPanel";
-            this.LandingPageMainPanel.Size = new System.Drawing.Size(1180, 661);
+            this.LandingPageMainPanel.Size = new System.Drawing.Size(1180, 667);
             this.LandingPageMainPanel.TabIndex = 8;
             // 
             // ErrorLabel

@@ -18,10 +18,14 @@ namespace LibraryBookSystem
     {
         private Boolean isAddingReservation = false;
 
+        private Panel landingPageMainPanel;
+
         string connectionString = ConfigurationManager.ConnectionStrings["LibraryBookSystem.Properties.Settings.ist2koConnectionString"].ConnectionString;
-        public LibrarianHomePage()
+        public LibrarianHomePage(Panel LandingPageMainPanel)
         {
             InitializeComponent();
+
+            this.landingPageMainPanel = LandingPageMainPanel;
 
             menuBtn.Click += handleMenuBtn;
 
@@ -58,6 +62,7 @@ namespace LibraryBookSystem
             homePagePanel.Controls.Clear();
 
             //homePagePanel.Dock = DockStyle.Fill;
+            userControl.BackColor = Color.Transparent;
 
             homePagePanel.Controls.Add(userControl);
         }
@@ -70,21 +75,37 @@ namespace LibraryBookSystem
 
             viewReservationBtn.Visible = false;
         }
+        public void RemoveUserControls(Panel panel)
+        {
+            foreach (Control ctrl in panel.Controls.Cast<Control>().ToList())
+            {
+                if (ctrl.Tag != null && ctrl.Tag.ToString() == "dynamic")
+                {
+                    panel.Controls.Remove(ctrl);
+                    ctrl.Dispose();
+                }
+            }
+        }
+
 
         private async void handleSignoutBtn(object sender, EventArgs e)
         {
 
-            LandingPage newLandingPage = new LandingPage();
+            RemoveUserControls(landingPageMainPanel);
 
-            newLandingPage.StartPosition = FormStartPosition.Manual;
+            //LandingPage newLandingPage = new LandingPage();
 
-            newLandingPage.Location = new Point(this.FindForm().Location.X, this.FindForm().Location.Y);
+            //landingPageMainPanel.Controls.Clear();  
 
-            newLandingPage.Show();
+            //newLandingPage.StartPosition = FormStartPosition.Manual;
 
-            await Task.Delay(2000);
+            //newLandingPage.Location = new Point(this.FindForm().Location.X, this.FindForm().Location.Y);
 
-            this.FindForm().Hide(); // correct this, it kills ram ...
+            //newLandingPage.Show();
+
+            //await Task.Delay(2000);
+
+            //this.FindForm().Hide(); // correct this, it kills ram ...
         }
 
         private void signoutBtn_Click(object sender, EventArgs e)

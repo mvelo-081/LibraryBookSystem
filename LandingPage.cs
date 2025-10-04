@@ -19,7 +19,7 @@ namespace LibraryBookSystem
 
         string connectionString = ConfigurationManager.ConnectionStrings["LibraryBookSystem.Properties.Settings.ist2koConnectionString"].ConnectionString;
 
-        private Boolean isTestingMode = true; // change this if not in testing mode!
+        private Boolean isTestingMode = false; // change this if not in testing mode!
         public LandingPage()
         {
             InitializeComponent();
@@ -58,10 +58,12 @@ namespace LibraryBookSystem
         {
             if (isTestingMode)
             {
-                LandingPageMainPanel.Controls.Clear();
+                //LandingPageMainPanel.Controls.Clear();
                 LandingPageMainPanel.Dock = DockStyle.Fill;
-                ManagerHomePage homePage = new ManagerHomePage();
+                ManagerHomePage homePage = new ManagerHomePage(LandingPageMainPanel);
+                homePage.Tag = "dynamic";
                 LandingPageMainPanel.Controls.Add(homePage);
+                homePage.BringToFront(); // henging if this works
                 return;
             }
             
@@ -90,16 +92,20 @@ namespace LibraryBookSystem
 
                             if (role == "Manager" && isMananger)
                             {
-                                LandingPageMainPanel.Controls.Clear();
+                                //LandingPageMainPanel.Controls.Clear();
                                 LandingPageMainPanel.Dock = DockStyle.Fill;
-                                ManagerHomePage homePage = new ManagerHomePage();
+                                ManagerHomePage homePage = new ManagerHomePage(LandingPageMainPanel);
+                                homePage.Tag = "dynamic";
+                                homePage.BringToFront(); // henging if this works
                                 LandingPageMainPanel.Controls.Add(homePage);
                             }
                             else if (role == "Librarian" && !isMananger)
                             {
-                                LandingPageMainPanel.Controls.Clear();
+                                //LandingPageMainPanel.Controls.Clear();
                                 LandingPageMainPanel.Dock = DockStyle.Fill;
-                                LibrarianHomePage homePage = new LibrarianHomePage();
+                                LibrarianHomePage homePage = new LibrarianHomePage(LandingPageMainPanel);
+                                homePage.Tag = "dynamic";
+                                homePage.BringToFront(); 
                                 LandingPageMainPanel.Controls.Add(homePage);
                             }
                             else if (role == "Manager" && !isMananger)

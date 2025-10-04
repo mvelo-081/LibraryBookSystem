@@ -12,9 +12,12 @@ namespace LibraryBookSystem
 {
     public partial class ManagerHomePage : UserControl
     {
-        public ManagerHomePage()
+        private Panel landingPageMainPanel;
+        public ManagerHomePage(Panel landingPageMainPanel)
         {
             InitializeComponent();
+
+            this.landingPageMainPanel = landingPageMainPanel;
 
             manMenuBtn.Click += handleMenuBtn;
 
@@ -39,25 +42,40 @@ namespace LibraryBookSystem
 
         private void handleMenuBtn(object sender, EventArgs e)
         {
-            switchUserControl(new MenuUserControl(homePagePanel, manMenuBtn));
+            switchUserControl(new ManagerMenuUserControl(homePagePanel, manMenuBtn));
 
             manMenuBtn.Visible = false;
         }
 
+        public void RemoveUserControls(Panel panel)
+        {
+            foreach (Control ctrl in panel.Controls.Cast<Control>().ToList())  // TODO: fix the error here!
+            {
+                if (ctrl.Tag != null && ctrl.Tag.ToString() == "dynamic")
+                {
+                    panel.Controls.Remove(ctrl);
+                    ctrl.Dispose();
+                }
+            }
+        }
+
+
+
+
         private async void handleSignoutBtn(object sender, EventArgs e)
         {
+            RemoveUserControls(landingPageMainPanel);
+            //LandingPage newLandingPage = new LandingPage();
 
-            LandingPage newLandingPage = new LandingPage();
+            //newLandingPage.StartPosition = FormStartPosition.Manual;
 
-            newLandingPage.StartPosition = FormStartPosition.Manual;
+            //newLandingPage.Location = new Point(this.FindForm().Location.X, this.FindForm().Location.Y);
 
-            newLandingPage.Location = new Point(this.FindForm().Location.X, this.FindForm().Location.Y);
+            //newLandingPage.Show();
 
-            newLandingPage.Show();
+            //await Task.Delay(2000);
 
-            await Task.Delay(2000);
-
-            this.FindForm().Hide(); // corret this, it kills ram ...
+            //this.FindForm().Hide(); // corret this, it kills ram ...
         }
 
         

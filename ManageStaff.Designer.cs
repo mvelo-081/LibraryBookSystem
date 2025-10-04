@@ -83,7 +83,7 @@
             // 
             firstNameLabel.AutoSize = true;
             firstNameLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            firstNameLabel.Location = new System.Drawing.Point(239, 239);
+            firstNameLabel.Location = new System.Drawing.Point(250, 174);
             firstNameLabel.Name = "firstNameLabel";
             firstNameLabel.Size = new System.Drawing.Size(96, 23);
             firstNameLabel.TabIndex = 4;
@@ -93,7 +93,7 @@
             // 
             staff_LNameLabel.AutoSize = true;
             staff_LNameLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            staff_LNameLabel.Location = new System.Drawing.Point(239, 282);
+            staff_LNameLabel.Location = new System.Drawing.Point(251, 251);
             staff_LNameLabel.Name = "staff_LNameLabel";
             staff_LNameLabel.Size = new System.Drawing.Size(95, 23);
             staff_LNameLabel.TabIndex = 6;
@@ -103,7 +103,7 @@
             // 
             staff_UsernameLabel.AutoSize = true;
             staff_UsernameLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            staff_UsernameLabel.Location = new System.Drawing.Point(239, 326);
+            staff_UsernameLabel.Location = new System.Drawing.Point(250, 330);
             staff_UsernameLabel.Name = "staff_UsernameLabel";
             staff_UsernameLabel.Size = new System.Drawing.Size(91, 23);
             staff_UsernameLabel.TabIndex = 8;
@@ -113,7 +113,7 @@
             // 
             staff_PasswordLabel.AutoSize = true;
             staff_PasswordLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            staff_PasswordLabel.Location = new System.Drawing.Point(239, 366);
+            staff_PasswordLabel.Location = new System.Drawing.Point(251, 410);
             staff_PasswordLabel.Name = "staff_PasswordLabel";
             staff_PasswordLabel.Size = new System.Drawing.Size(84, 23);
             staff_PasswordLabel.TabIndex = 10;
@@ -128,7 +128,7 @@
             this.groupBox1.Controls.Add(this.searchBtn);
             this.groupBox1.Controls.Add(this.searchTextBox);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(6, 87);
+            this.groupBox1.Location = new System.Drawing.Point(3, 57);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(884, 105);
             this.groupBox1.TabIndex = 0;
@@ -138,9 +138,9 @@
             // prevBtn
             // 
             this.prevBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prevBtn.Location = new System.Drawing.Point(297, 64);
+            this.prevBtn.Location = new System.Drawing.Point(251, 64);
             this.prevBtn.Name = "prevBtn";
-            this.prevBtn.Size = new System.Drawing.Size(106, 31);
+            this.prevBtn.Size = new System.Drawing.Size(155, 35);
             this.prevBtn.TabIndex = 4;
             this.prevBtn.Text = "Previous";
             this.prevBtn.UseVisualStyleBackColor = true;
@@ -149,9 +149,9 @@
             // nextBtn
             // 
             this.nextBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextBtn.Location = new System.Drawing.Point(427, 64);
+            this.nextBtn.Location = new System.Drawing.Point(412, 64);
             this.nextBtn.Name = "nextBtn";
-            this.nextBtn.Size = new System.Drawing.Size(106, 31);
+            this.nextBtn.Size = new System.Drawing.Size(155, 35);
             this.nextBtn.TabIndex = 3;
             this.nextBtn.Text = "Next";
             this.nextBtn.UseVisualStyleBackColor = true;
@@ -160,9 +160,9 @@
             // lastBtn
             // 
             this.lastBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastBtn.Location = new System.Drawing.Point(586, 64);
+            this.lastBtn.Location = new System.Drawing.Point(573, 64);
             this.lastBtn.Name = "lastBtn";
-            this.lastBtn.Size = new System.Drawing.Size(106, 31);
+            this.lastBtn.Size = new System.Drawing.Size(155, 35);
             this.lastBtn.TabIndex = 2;
             this.lastBtn.Text = "Last";
             this.lastBtn.UseVisualStyleBackColor = true;
@@ -171,9 +171,9 @@
             // firstBtn
             // 
             this.firstBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstBtn.Location = new System.Drawing.Point(169, 64);
+            this.firstBtn.Location = new System.Drawing.Point(90, 64);
             this.firstBtn.Name = "firstBtn";
-            this.firstBtn.Size = new System.Drawing.Size(106, 31);
+            this.firstBtn.Size = new System.Drawing.Size(155, 35);
             this.firstBtn.TabIndex = 1;
             this.firstBtn.Text = "First";
             this.firstBtn.UseVisualStyleBackColor = true;
@@ -182,9 +182,9 @@
             // searchBtn
             // 
             this.searchBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBtn.Location = new System.Drawing.Point(586, 20);
+            this.searchBtn.Location = new System.Drawing.Point(573, 17);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(106, 31);
+            this.searchBtn.Size = new System.Drawing.Size(155, 35);
             this.searchBtn.TabIndex = 1;
             this.searchBtn.Text = "Search";
             this.searchBtn.UseVisualStyleBackColor = true;
@@ -194,16 +194,16 @@
             this.searchTextBox.BackColor = System.Drawing.SystemColors.Control;
             this.searchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.searchTextBox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTextBox.Location = new System.Drawing.Point(262, 21);
+            this.searchTextBox.Location = new System.Drawing.Point(183, 21);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(271, 30);
+            this.searchTextBox.Size = new System.Drawing.Size(384, 30);
             this.searchTextBox.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(165, 24);
+            this.label1.Location = new System.Drawing.Point(86, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 23);
             this.label1.TabIndex = 0;
@@ -239,7 +239,7 @@
             this.firstNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.firstNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.staffBindingSource, "Staff_FName", true));
             this.firstNameTextBox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstNameTextBox.Location = new System.Drawing.Point(351, 236);
+            this.firstNameTextBox.Location = new System.Drawing.Point(254, 209);
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(271, 30);
             this.firstNameTextBox.TabIndex = 5;
@@ -250,7 +250,7 @@
             this.lastNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lastNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.staffBindingSource, "Staff_LName", true));
             this.lastNameTextBox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastNameTextBox.Location = new System.Drawing.Point(351, 276);
+            this.lastNameTextBox.Location = new System.Drawing.Point(254, 288);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(271, 30);
             this.lastNameTextBox.TabIndex = 7;
@@ -262,7 +262,7 @@
             this.usernameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.usernameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.staffBindingSource, "Staff_Username", true));
             this.usernameTextBox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextBox.Location = new System.Drawing.Point(351, 320);
+            this.usernameTextBox.Location = new System.Drawing.Point(254, 365);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(271, 30);
             this.usernameTextBox.TabIndex = 9;
@@ -273,7 +273,7 @@
             this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.passwordTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.staffBindingSource, "Staff_Password", true));
             this.passwordTextBox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextBox.Location = new System.Drawing.Point(351, 366);
+            this.passwordTextBox.Location = new System.Drawing.Point(254, 451);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(271, 30);
             this.passwordTextBox.TabIndex = 11;
@@ -281,9 +281,9 @@
             // removeBtn
             // 
             this.removeBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removeBtn.Location = new System.Drawing.Point(560, 420);
+            this.removeBtn.Location = new System.Drawing.Point(499, 487);
             this.removeBtn.Name = "removeBtn";
-            this.removeBtn.Size = new System.Drawing.Size(106, 31);
+            this.removeBtn.Size = new System.Drawing.Size(155, 35);
             this.removeBtn.TabIndex = 12;
             this.removeBtn.Text = "Remove";
             this.removeBtn.UseVisualStyleBackColor = true;
@@ -292,9 +292,9 @@
             // updateBtn
             // 
             this.updateBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateBtn.Location = new System.Drawing.Point(389, 420);
+            this.updateBtn.Location = new System.Drawing.Point(338, 487);
             this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(106, 31);
+            this.updateBtn.Size = new System.Drawing.Size(155, 35);
             this.updateBtn.TabIndex = 13;
             this.updateBtn.Text = "Update";
             this.updateBtn.UseVisualStyleBackColor = true;
@@ -303,9 +303,9 @@
             // addNewBtn
             // 
             this.addNewBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewBtn.Location = new System.Drawing.Point(224, 420);
+            this.addNewBtn.Location = new System.Drawing.Point(177, 487);
             this.addNewBtn.Name = "addNewBtn";
-            this.addNewBtn.Size = new System.Drawing.Size(106, 31);
+            this.addNewBtn.Size = new System.Drawing.Size(155, 35);
             this.addNewBtn.TabIndex = 14;
             this.addNewBtn.Text = "Add New";
             this.addNewBtn.UseVisualStyleBackColor = true;
@@ -315,7 +315,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(277, 27);
+            this.label2.Location = new System.Drawing.Point(277, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(284, 38);
             this.label2.TabIndex = 15;

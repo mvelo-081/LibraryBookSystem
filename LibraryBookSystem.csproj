@@ -215,6 +215,12 @@
     <Compile Include="ReturnBookUserControl1.Designer.cs">
       <DependentUpon>ReturnBookUserControl1.cs</DependentUpon>
     </Compile>
+    <Compile Include="SigninPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SigninPage.Designer.cs">
+      <DependentUpon>SigninPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewBooksUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -286,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReturnBookUserControl1.resx">
       <DependentUpon>ReturnBookUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SigninPage.resx">
+      <DependentUpon>SigninPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewBooksUserControl.resx">
       <DependentUpon>ViewBooksUserControl.cs</DependentUpon>
