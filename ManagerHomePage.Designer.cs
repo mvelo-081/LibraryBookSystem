@@ -107,7 +107,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::LibraryBookSystem.Properties.Resources.pngwing1;
             this.Controls.Add(this.navPanel);
             this.Controls.Add(this.homePagePanel);
             this.MaximumSize = new System.Drawing.Size(1190, 705);

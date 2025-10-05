@@ -203,7 +203,7 @@
             // 
             this.LandingPageMainPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LandingPageMainPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.LandingPageMainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LandingPageMainPanel.BackgroundImage")));
+            this.LandingPageMainPanel.BackgroundImage = global::LibraryBookSystem.Properties.Resources.pngwing_com;
             this.LandingPageMainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LandingPageMainPanel.Controls.Add(this.ErrorLabel);
             this.LandingPageMainPanel.Controls.Add(this.navPanel);
@@ -247,6 +247,7 @@
             this.MaximumSize = new System.Drawing.Size(1190, 705);
             this.MinimumSize = new System.Drawing.Size(1190, 705);
             this.Name = "LandingPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign in";
             ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ist2koDataSet)).EndInit();

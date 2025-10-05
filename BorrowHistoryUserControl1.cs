@@ -28,12 +28,12 @@ namespace LibraryBookSystem
             {
                 string query = @"
                                 SELECT 
-                                    Student.Student_FName + ' ' + Student.Student_LName AS [Name and Surname],
-                                    Student.Student_Email AS [Email],
-                                    Book.Book_Title AS [Title],
-                                    Borrow.Borrow_date AS [Taken on],
-                                    Borrow.Due_date AS [Due on],
-                                    Borrow.Return_Date AS [Returned on]
+                                    Student.Student_FName + ' ' + Student.Student_LName AS 'Name and Surname',
+                                    Student.Student_Email AS 'Email',
+                                    Book.Book_Title AS 'Title',
+                                    Borrow.Borrow_date AS 'Taken on',
+                                    Borrow.Due_date AS 'Due on',
+                                    Borrow.Return_Date AS 'Returned on'
                                 FROM Borrow
                                 JOIN Student ON Borrow.StudentID = Student.StudentID
                                 JOIN Book ON Borrow.BookID = Book.BookID";

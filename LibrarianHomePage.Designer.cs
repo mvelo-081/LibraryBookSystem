@@ -121,7 +121,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::LibraryBookSystem.Properties.Resources.pngwing_com;
             this.Controls.Add(this.homePagePanel);
             this.Controls.Add(this.navPanel);
             this.DoubleBuffered = true;

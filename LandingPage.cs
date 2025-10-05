@@ -73,7 +73,8 @@ namespace LibraryBookSystem
             string whoLoggedIn = "";
 
 
-            string query = "SELECT Staff_fname, staff_lname, Staff_username, Staff_Password, Staff_Role FROM Staff WHERE Staff_Password = @Password AND Staff_username = @Username";
+            string query = @"SELECT Staff_fname, staff_lname, Staff_username, Staff_Password, Staff_Role 
+                             FROM Staff WHERE Staff_Password = @Password AND Staff_username = @Username";
 
 
             using (SqlConnection sqlconnect = new SqlConnection(connectionString))
@@ -93,7 +94,7 @@ namespace LibraryBookSystem
 
                             if (role == "Manager" && isMananger)
                             {
-                                this.Text = "Welcome back!, " + (reader["Staff_fname"] + " " + reader["staff_lname"]) + ("Librarian");
+                                this.Text = "Welcome back!, " + (reader["Staff_fname"] + " " + reader["staff_lname"]) + (" (Manager)");
                                 LandingPageMainPanel.Dock = DockStyle.Fill;
                                 ManagerHomePage homePage = new ManagerHomePage(LandingPageMainPanel);
                                 homePage.Tag = "dynamic";
@@ -102,7 +103,7 @@ namespace LibraryBookSystem
                             }
                             else if (role == "Librarian" && !isMananger)
                             {
-                                this.Text = "Welcome back!, " + (reader["Staff_fname"] + " " + reader["staff_lname"]) + ("Manager");
+                                this.Text = "Welcome back!, " + (reader["Staff_fname"] + " " + reader["staff_lname"]) + ("(Librarian)");
                                 LandingPageMainPanel.Dock = DockStyle.Fill;
                                 LibrarianHomePage homePage = new LibrarianHomePage(LandingPageMainPanel);
                                 homePage.Tag = "dynamic";

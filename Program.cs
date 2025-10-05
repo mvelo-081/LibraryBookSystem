@@ -16,6 +16,12 @@ namespace LibraryBookSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            using (var intro = new IntroForm())
+            {
+                intro.ShowDialog();
+            }
+
             Application.Run(new LandingPage());
         }
     }

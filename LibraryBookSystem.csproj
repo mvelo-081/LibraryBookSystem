@@ -12,6 +12,22 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\mvelo\OneDrive\Desktop\LibraryBookSystem_application\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,6 +51,18 @@
   <PropertyGroup />
   <PropertyGroup>
     <StartupObject>LibraryBookSystem.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>CF2FF2C5CE3570C09B65C2DC0ECCD6921CBB2A9C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>LibraryBookSystem_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -135,10 +163,11 @@
     <Compile Include="BorrowHistoryUserControl1.Designer.cs">
       <DependentUpon>BorrowHistoryUserControl1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ist2jyDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ist2jyDataSet.xsd</DependentUpon>
+    <Compile Include="IntroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroForm.Designer.cs">
+      <DependentUpon>IntroForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ist2koDataSet.cs">
       <DependentUpon>ist2koDataSet.xsd</DependentUpon>
@@ -147,11 +176,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ist2koDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ist2koDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ist2koDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="LibrarianHomePage.cs">
       <SubType>UserControl</SubType>
@@ -248,6 +272,9 @@
     <EmbeddedResource Include="BorrowHistoryUserControl1.resx">
       <DependentUpon>BorrowHistoryUserControl1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IntroForm.resx">
+      <DependentUpon>IntroForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LibrarianHomePage.resx">
       <DependentUpon>LibrarianHomePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,6 +307,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ReservationUserControl1.resx">
       <DependentUpon>ReservationUserControl1.cs</DependentUpon>
@@ -299,17 +327,6 @@
     <EmbeddedResource Include="ViewStatistics.resx">
       <DependentUpon>ViewStatistics.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ist2jyDataSet.xsc">
-      <DependentUpon>ist2jyDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ist2jyDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ist2jyDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ist2jyDataSet.xss">
-      <DependentUpon>ist2jyDataSet.xsd</DependentUpon>
-    </None>
     <None Include="ist2koDataSet.xsc">
       <DependentUpon>ist2koDataSet.xsd</DependentUpon>
     </None>
@@ -321,17 +338,7 @@
     <None Include="ist2koDataSet.xss">
       <DependentUpon>ist2koDataSet.xsd</DependentUpon>
     </None>
-    <None Include="ist2koDataSet1.xsc">
-      <DependentUpon>ist2koDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="ist2koDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ist2koDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ist2koDataSet1.xss">
-      <DependentUpon>ist2koDataSet1.xsd</DependentUpon>
-    </None>
+    <None Include="LibraryBookSystem_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -345,6 +352,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\book %281%29.ico" />
+    <Content Include="Resources\book %281%29.png" />
+    <None Include="Resources\book %281%291.png" />
+    <Content Include="Resources\pngwing.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -31,7 +31,7 @@ namespace LibraryBookSystem
 
             cancelBtn.Click += handleCancelBtn;
 
-
+            newStudentBtn.Click += handleNewStudentBtn;
         }
 
 
@@ -136,14 +136,16 @@ namespace LibraryBookSystem
                         int newStudentId = (int)command.ExecuteScalar();
                         if (newStudentId.ToString() != null)
                         {
+                            MessageBox.Show("New student added successfully!");
                             ErrorLabel.ForeColor = Color.Green;
                             ErrorLabel.Text = "New student added successfully!";
-                            ErrorLabel.Visible = true;
+                            ErrorLabel.Visible = false;
                         }
                         else
-                        { 
+                        {
+                            MessageBox.Show("Failed to add a new student. Please try again.");
                             ErrorLabel.Text = "Failed to add new student. Please try again.";
-                            ErrorLabel.Visible = true;
+                            ErrorLabel.Visible = false;
                         }
                         studentNameData.Clear(); StudentSurnameData.Clear(); emailTextData.Clear(); cellPhoneNumberTextData.Clear();
                         connection.Close();

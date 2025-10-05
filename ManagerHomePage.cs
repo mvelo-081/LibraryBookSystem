@@ -64,6 +64,7 @@ namespace LibraryBookSystem
 
         private async void handleSignoutBtn(object sender, EventArgs e)
         {
+            this.FindForm().Text = "Sign in";
             RemoveUserControls(landingPageMainPanel);
         }
     }

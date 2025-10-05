@@ -30,7 +30,6 @@ namespace LibraryBookSystem
 
         private void ViewDatabase_Load(object sender, EventArgs e)
         {
-            // Optional: load a default table when control loads
             comboBox1.SelectedIndex = 0;
         }
 

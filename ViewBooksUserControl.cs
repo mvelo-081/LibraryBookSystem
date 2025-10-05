@@ -72,20 +72,20 @@ namespace LibraryBookSystem
                 if (option == "All Categories" || option == "")
                 {
                     query = @"SELECT 
-                                book_title as [Title],
-	                            book_Author as [Author],
-	                            book_Category as [Category],
-	                            book_quantity as [Quantity]
+                                book_title as 'Title',
+	                            book_Author as 'Author',
+	                            book_Category as 'Category',
+	                            book_quantity as 'Quantity'
                                 FROM Book";
                     adapter = new SqlDataAdapter(query, conn);
                 }
                 else
                 {
                     query = @"SELECT 
-                                book_title as [Title],
-	                            book_Author as [Author],
-	                            book_Category as [Category],
-	                            book_quantity as [Quantity]
+                                book_title as 'Title',
+	                            book_Author as 'Author',
+	                            book_Category as 'Category',
+	                            book_quantity as 'Quantity'
                                 FROM Book
                               WHERE book_category = @option";
                     adapter = new SqlDataAdapter(query, conn);
