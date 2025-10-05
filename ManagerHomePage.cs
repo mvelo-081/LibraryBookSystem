@@ -65,19 +65,6 @@ namespace LibraryBookSystem
         private async void handleSignoutBtn(object sender, EventArgs e)
         {
             RemoveUserControls(landingPageMainPanel);
-            //LandingPage newLandingPage = new LandingPage();
-
-            //newLandingPage.StartPosition = FormStartPosition.Manual;
-
-            //newLandingPage.Location = new Point(this.FindForm().Location.X, this.FindForm().Location.Y);
-
-            //newLandingPage.Show();
-
-            //await Task.Delay(2000);
-
-            //this.FindForm().Hide(); // corret this, it kills ram ...
         }
-
-        
     }
 }

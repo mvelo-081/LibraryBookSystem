@@ -38,68 +38,74 @@
             // 
             // btn6
             // 
+            this.btn6.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn6.Location = new System.Drawing.Point(617, 338);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(177, 153);
             this.btn6.TabIndex = 17;
             this.btn6.Text = "feature 6";
-            this.btn6.UseVisualStyleBackColor = true;
+            this.btn6.UseVisualStyleBackColor = false;
             this.btn6.Click += new System.EventHandler(this.viewBorrowHistBtn_Click);
             // 
             // OverDuebtn
             // 
+            this.OverDuebtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.OverDuebtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OverDuebtn.Location = new System.Drawing.Point(350, 338);
             this.OverDuebtn.Name = "OverDuebtn";
             this.OverDuebtn.Size = new System.Drawing.Size(177, 153);
             this.OverDuebtn.TabIndex = 16;
             this.OverDuebtn.Text = "View overdue returns";
-            this.OverDuebtn.UseVisualStyleBackColor = true;
+            this.OverDuebtn.UseVisualStyleBackColor = false;
             this.OverDuebtn.Click += new System.EventHandler(this.returnedBookBtn_Click);
             // 
             // btn4
             // 
+            this.btn4.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn4.Location = new System.Drawing.Point(79, 338);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(177, 153);
             this.btn4.TabIndex = 15;
             this.btn4.Text = "Add new Book";
-            this.btn4.UseVisualStyleBackColor = true;
+            this.btn4.UseVisualStyleBackColor = false;
             this.btn4.Click += new System.EventHandler(this.viewBookingsBtn_Click);
             // 
             // Statistics
             // 
+            this.Statistics.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Statistics.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Statistics.Location = new System.Drawing.Point(617, 79);
             this.Statistics.Name = "Statistics";
             this.Statistics.Size = new System.Drawing.Size(177, 153);
             this.Statistics.TabIndex = 14;
             this.Statistics.Text = "View Statistics";
-            this.Statistics.UseVisualStyleBackColor = true;
+            this.Statistics.UseVisualStyleBackColor = false;
             this.Statistics.Click += new System.EventHandler(this.bookingBtn_Click);
             // 
             // manageLibrartStaffBtn
             // 
+            this.manageLibrartStaffBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.manageLibrartStaffBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manageLibrartStaffBtn.Location = new System.Drawing.Point(350, 79);
             this.manageLibrartStaffBtn.Name = "manageLibrartStaffBtn";
             this.manageLibrartStaffBtn.Size = new System.Drawing.Size(177, 153);
             this.manageLibrartStaffBtn.TabIndex = 13;
             this.manageLibrartStaffBtn.Text = "Manage Library Staff";
-            this.manageLibrartStaffBtn.UseVisualStyleBackColor = true;
+            this.manageLibrartStaffBtn.UseVisualStyleBackColor = false;
             this.manageLibrartStaffBtn.Click += new System.EventHandler(this.availableBooksBtn_Click);
             // 
             // viewDataBaseTableBtn
             // 
+            this.viewDataBaseTableBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.viewDataBaseTableBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewDataBaseTableBtn.Location = new System.Drawing.Point(79, 79);
             this.viewDataBaseTableBtn.Name = "viewDataBaseTableBtn";
             this.viewDataBaseTableBtn.Size = new System.Drawing.Size(177, 153);
             this.viewDataBaseTableBtn.TabIndex = 12;
             this.viewDataBaseTableBtn.Text = "View Database Tables";
-            this.viewDataBaseTableBtn.UseVisualStyleBackColor = true;
+            this.viewDataBaseTableBtn.UseVisualStyleBackColor = false;
             this.viewDataBaseTableBtn.Click += new System.EventHandler(this.ViewDatabaseTableBtn_Click);
             // 
             // ManagerMenuUserControl

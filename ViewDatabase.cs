@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Data.SqlClient;
+using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace LibraryBookSystem
 {
@@ -7,7 +11,10 @@ namespace LibraryBookSystem
     {
         private Panel homePagePanel;
 
-        private Button menuBtn; 
+        private Button menuBtn;
+
+        string connectionString = ConfigurationManager.ConnectionStrings["LibraryBookSystem.Properties.Settings.ist2koConnectionString"].ConnectionString;
+
         public ViewDatabase(Panel homePagePanel, Button menuBtn)
         {
             InitializeComponent();
@@ -38,55 +45,55 @@ namespace LibraryBookSystem
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selected = comboBox1.SelectedItem.ToString();
-
-            // Clear old data
             dataGridView1.DataSource = null;
+            string query = "";
 
             try
             {
-                switch (selected)
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    case "Books table":
-                        var booksAdapter = new ist2koDataSetTableAdapters.BookTableAdapter();
-                        var booksTable = new ist2koDataSet.BookDataTable();
-                        booksAdapter.Fill(booksTable);
-                        dataGridView1.DataSource = booksTable;
-                        break;
+                    conn.Open();
 
-                    case "Student table":
-                        var studentAdapter = new ist2koDataSetTableAdapters.StudentTableAdapter();
-                        var studentTable = new ist2koDataSet.StudentDataTable();
-                        studentAdapter.Fill(studentTable);
-                        dataGridView1.DataSource = studentTable;
-                        break;
+                    switch (selected)
+                    {
+                        case "Books table":
+                            query = "SELECT BookID AS [Book ID], Book_Title AS [Title], Book_Author AS [Author], Book_Category AS [Category], Book_Quantity AS [Quantity], Availability_Status AS [Status] FROM Book";
+                            break;
 
-                    case "Reservation table":
-                        var reservationAdapter = new ist2koDataSetTableAdapters.ReservationTableAdapter();
-                        var reservationTable = new ist2koDataSet.ReservationDataTable();
-                        reservationAdapter.Fill(reservationTable);
-                        dataGridView1.DataSource = reservationTable;
-                        break;
+                        case "Student table":
+                            query = "SELECT StudentID AS [Student ID], Student_FName AS [First Name], Student_LName AS [Last Name], Student_Email AS [Email], Student_CellphoneNo AS [Cellphone No] FROM Student";
+                            break;
 
-                    case "Borrow table":
-                        var borrowAdapter = new ist2koDataSetTableAdapters.BorrowTableAdapter();
-                        var borrowTable = new ist2koDataSet.BorrowDataTable();
-                        borrowAdapter.Fill(borrowTable);
-                        dataGridView1.DataSource = borrowTable;
-                        break;
+                        case "Staff table":
+                            query = "SELECT StaffID AS [Staff ID], Staff_FName AS [First Name], Staff_LName AS [Last Name], Staff_Username AS [Username], Staff_Role AS [Role] FROM Staff";
+                            break;
 
-                    case "Staff table":
-                        var staffAdapter = new ist2koDataSetTableAdapters.StaffTableAdapter();
-                        var staffTable = new ist2koDataSet.StaffDataTable();
-                        staffAdapter.Fill(staffTable);
-                        dataGridView1.DataSource = staffTable;
-                        break;
+                        case "Borrow table":
+                            query = "SELECT BorrowID AS [Borrow ID], Borrow_Date AS [Borrow Date], Due_Date AS [Due Date], Return_Date AS [Return Date] FROM Borrow";
+                            break;
+
+                        case "Reservation table":
+                            query = "SELECT ReservationID AS [Reservation ID], Reserved_Date AS [Reserved Date], Reservation_Status AS [Status] FROM Reservation";
+                            break;
+
+                        default:
+                            MessageBox.Show("Unknown table selected.");
+                            return;
+                    }
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+                    dataGridView1.DataSource = table;
+
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading data!");
+                MessageBox.Show("Error loading data:\n" + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }
 

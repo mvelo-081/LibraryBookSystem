@@ -52,24 +52,26 @@
             // 
             // manMenuBtn
             // 
+            this.manMenuBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.manMenuBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manMenuBtn.Location = new System.Drawing.Point(827, 13);
             this.manMenuBtn.Name = "manMenuBtn";
             this.manMenuBtn.Size = new System.Drawing.Size(155, 35);
             this.manMenuBtn.TabIndex = 3;
             this.manMenuBtn.Text = "Menu";
-            this.manMenuBtn.UseVisualStyleBackColor = true;
+            this.manMenuBtn.UseVisualStyleBackColor = false;
             this.manMenuBtn.Visible = false;
             // 
             // signoutBtn
             // 
+            this.signoutBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.signoutBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signoutBtn.Location = new System.Drawing.Point(988, 13);
             this.signoutBtn.Name = "signoutBtn";
             this.signoutBtn.Size = new System.Drawing.Size(155, 35);
             this.signoutBtn.TabIndex = 2;
             this.signoutBtn.Text = "Sign out";
-            this.signoutBtn.UseVisualStyleBackColor = true;
+            this.signoutBtn.UseVisualStyleBackColor = false;
             // 
             // IconLabel
             // 
@@ -104,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.Controls.Add(this.navPanel);
             this.Controls.Add(this.homePagePanel);

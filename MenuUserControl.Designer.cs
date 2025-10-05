@@ -38,63 +38,69 @@
             // 
             // viewBorrowHistBtn
             // 
+            this.viewBorrowHistBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.viewBorrowHistBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewBorrowHistBtn.Location = new System.Drawing.Point(623, 332);
             this.viewBorrowHistBtn.Name = "viewBorrowHistBtn";
             this.viewBorrowHistBtn.Size = new System.Drawing.Size(177, 153);
             this.viewBorrowHistBtn.TabIndex = 11;
             this.viewBorrowHistBtn.Text = "View Borrow History";
-            this.viewBorrowHistBtn.UseVisualStyleBackColor = true;
+            this.viewBorrowHistBtn.UseVisualStyleBackColor = false;
             // 
             // returnedBookBtn
             // 
+            this.returnedBookBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.returnedBookBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnedBookBtn.Location = new System.Drawing.Point(356, 332);
             this.returnedBookBtn.Name = "returnedBookBtn";
             this.returnedBookBtn.Size = new System.Drawing.Size(177, 153);
             this.returnedBookBtn.TabIndex = 10;
             this.returnedBookBtn.Text = "Return A Book";
-            this.returnedBookBtn.UseVisualStyleBackColor = true;
+            this.returnedBookBtn.UseVisualStyleBackColor = false;
             // 
             // viewReservationsBtn
             // 
+            this.viewReservationsBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.viewReservationsBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewReservationsBtn.Location = new System.Drawing.Point(74, 332);
             this.viewReservationsBtn.Name = "viewReservationsBtn";
             this.viewReservationsBtn.Size = new System.Drawing.Size(177, 153);
             this.viewReservationsBtn.TabIndex = 9;
             this.viewReservationsBtn.Text = "View Reservations";
-            this.viewReservationsBtn.UseVisualStyleBackColor = true;
+            this.viewReservationsBtn.UseVisualStyleBackColor = false;
             // 
             // bookingBtn
             // 
+            this.bookingBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.bookingBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookingBtn.Location = new System.Drawing.Point(623, 69);
             this.bookingBtn.Name = "bookingBtn";
             this.bookingBtn.Size = new System.Drawing.Size(177, 153);
             this.bookingBtn.TabIndex = 8;
             this.bookingBtn.Text = "Issue A Book";
-            this.bookingBtn.UseVisualStyleBackColor = true;
+            this.bookingBtn.UseVisualStyleBackColor = false;
             // 
             // availableBooksBtn
             // 
+            this.availableBooksBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.availableBooksBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.availableBooksBtn.Location = new System.Drawing.Point(356, 69);
             this.availableBooksBtn.Name = "availableBooksBtn";
             this.availableBooksBtn.Size = new System.Drawing.Size(177, 153);
             this.availableBooksBtn.TabIndex = 7;
             this.availableBooksBtn.Text = "View Available Books";
-            this.availableBooksBtn.UseVisualStyleBackColor = true;
+            this.availableBooksBtn.UseVisualStyleBackColor = false;
             // 
             // CreateNewStudentBtn
             // 
+            this.CreateNewStudentBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.CreateNewStudentBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateNewStudentBtn.Location = new System.Drawing.Point(74, 69);
             this.CreateNewStudentBtn.Name = "CreateNewStudentBtn";
             this.CreateNewStudentBtn.Size = new System.Drawing.Size(177, 153);
             this.CreateNewStudentBtn.TabIndex = 6;
             this.CreateNewStudentBtn.Text = "New Student";
-            this.CreateNewStudentBtn.UseVisualStyleBackColor = true;
+            this.CreateNewStudentBtn.UseVisualStyleBackColor = false;
             // 
             // MenuUserControl
             // 

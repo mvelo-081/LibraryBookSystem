@@ -133,6 +133,7 @@
             // 
             // signInBtn
             // 
+            this.signInBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.signInBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.signInBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signInBtn.Location = new System.Drawing.Point(385, 448);
@@ -141,7 +142,7 @@
             this.signInBtn.Size = new System.Drawing.Size(187, 42);
             this.signInBtn.TabIndex = 20;
             this.signInBtn.Text = "Sign in";
-            this.signInBtn.UseVisualStyleBackColor = true;
+            this.signInBtn.UseVisualStyleBackColor = false;
             // 
             // subWelcomeLabel
             // 
@@ -167,6 +168,7 @@
             // 
             // toggleAdminRoleBtn
             // 
+            this.toggleAdminRoleBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.toggleAdminRoleBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toggleAdminRoleBtn.Location = new System.Drawing.Point(979, 14);
             this.toggleAdminRoleBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -174,7 +176,7 @@
             this.toggleAdminRoleBtn.Size = new System.Drawing.Size(155, 34);
             this.toggleAdminRoleBtn.TabIndex = 1;
             this.toggleAdminRoleBtn.Text = "Manager profile";
-            this.toggleAdminRoleBtn.UseVisualStyleBackColor = true;
+            this.toggleAdminRoleBtn.UseVisualStyleBackColor = false;
             // 
             // IconLabel
             // 
@@ -200,9 +202,9 @@
             // LandingPageMainPanel
             // 
             this.LandingPageMainPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LandingPageMainPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.LandingPageMainPanel.BackColor = System.Drawing.SystemColors.Control;
             this.LandingPageMainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LandingPageMainPanel.BackgroundImage")));
-            this.LandingPageMainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LandingPageMainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.LandingPageMainPanel.Controls.Add(this.ErrorLabel);
             this.LandingPageMainPanel.Controls.Add(this.navPanel);
             this.LandingPageMainPanel.Controls.Add(this.subWelcomeLabel);
@@ -240,6 +242,7 @@
             this.ClientSize = new System.Drawing.Size(1172, 658);
             this.Controls.Add(this.LandingPageMainPanel);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximumSize = new System.Drawing.Size(1190, 705);
             this.MinimumSize = new System.Drawing.Size(1190, 705);

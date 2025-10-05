@@ -54,35 +54,38 @@
             // 
             // viewReservationBtn
             // 
+            this.viewReservationBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.viewReservationBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewReservationBtn.Location = new System.Drawing.Point(644, 13);
             this.viewReservationBtn.Name = "viewReservationBtn";
             this.viewReservationBtn.Size = new System.Drawing.Size(177, 35);
             this.viewReservationBtn.TabIndex = 4;
             this.viewReservationBtn.Text = "Add Reservation";
-            this.viewReservationBtn.UseVisualStyleBackColor = true;
+            this.viewReservationBtn.UseVisualStyleBackColor = false;
             this.viewReservationBtn.Visible = false;
             // 
             // menuBtn
             // 
+            this.menuBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.menuBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuBtn.Location = new System.Drawing.Point(827, 13);
             this.menuBtn.Name = "menuBtn";
             this.menuBtn.Size = new System.Drawing.Size(155, 35);
             this.menuBtn.TabIndex = 3;
             this.menuBtn.Text = "Menu";
-            this.menuBtn.UseVisualStyleBackColor = true;
+            this.menuBtn.UseVisualStyleBackColor = false;
             this.menuBtn.Visible = false;
             // 
             // signoutBtn
             // 
+            this.signoutBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.signoutBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signoutBtn.Location = new System.Drawing.Point(988, 13);
             this.signoutBtn.Name = "signoutBtn";
             this.signoutBtn.Size = new System.Drawing.Size(155, 35);
             this.signoutBtn.TabIndex = 2;
             this.signoutBtn.Text = "Sign out";
-            this.signoutBtn.UseVisualStyleBackColor = true;
+            this.signoutBtn.UseVisualStyleBackColor = false;
             this.signoutBtn.Click += new System.EventHandler(this.signoutBtn_Click);
             // 
             // IconLabel

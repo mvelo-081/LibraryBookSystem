@@ -70,9 +70,10 @@ namespace LibraryBookSystem
             string password = UserPasswordTextData.Text;
             string username = UserIdTextData.Text;
 
+            string whoLoggedIn = "";
 
 
-            string query = "SELECT Staff_username, Staff_Password, Staff_Role FROM Staff WHERE Staff_Password = @Password AND Staff_username = @Username";
+            string query = "SELECT Staff_fname, staff_lname, Staff_username, Staff_Password, Staff_Role FROM Staff WHERE Staff_Password = @Password AND Staff_username = @Username";
 
 
             using (SqlConnection sqlconnect = new SqlConnection(connectionString))
@@ -92,21 +93,21 @@ namespace LibraryBookSystem
 
                             if (role == "Manager" && isMananger)
                             {
-                                //LandingPageMainPanel.Controls.Clear();
+                                this.Text = "Welcome back!, " + (reader["Staff_fname"] + " " + reader["staff_lname"]) + ("Librarian");
                                 LandingPageMainPanel.Dock = DockStyle.Fill;
                                 ManagerHomePage homePage = new ManagerHomePage(LandingPageMainPanel);
                                 homePage.Tag = "dynamic";
-                                homePage.BringToFront(); // henging if this works
                                 LandingPageMainPanel.Controls.Add(homePage);
+                                homePage.BringToFront(); // henging if this works
                             }
                             else if (role == "Librarian" && !isMananger)
                             {
-                                //LandingPageMainPanel.Controls.Clear();
+                                this.Text = "Welcome back!, " + (reader["Staff_fname"] + " " + reader["staff_lname"]) + ("Manager");
                                 LandingPageMainPanel.Dock = DockStyle.Fill;
                                 LibrarianHomePage homePage = new LibrarianHomePage(LandingPageMainPanel);
                                 homePage.Tag = "dynamic";
-                                homePage.BringToFront(); 
                                 LandingPageMainPanel.Controls.Add(homePage);
+                                homePage.BringToFront();
                             }
                             else if (role == "Manager" && !isMananger)
                             {
