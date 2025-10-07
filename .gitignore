@@ -54,6 +54,10 @@ TestResults/
 *.Publish.xml
 publish/
 
+# Files containing confidential data
+App.config
+
+
 ##############################
 # End of Ignore File
 ##############################

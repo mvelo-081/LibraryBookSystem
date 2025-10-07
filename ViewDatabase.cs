@@ -33,13 +33,6 @@ namespace LibraryBookSystem
             comboBox1.SelectedIndex = 0;
         }
 
-        private void bookBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.bookBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.ist2koDataSet);
-        }
-
         // When user changes the selected option
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -56,23 +49,25 @@ namespace LibraryBookSystem
                     switch (selected)
                     {
                         case "Books table":
-                            query = "SELECT BookID AS [Book ID], Book_Title AS [Title], Book_Author AS [Author], Book_Category AS [Category], Book_Quantity AS [Quantity], Availability_Status AS [Status] FROM Book";
+                            query = "Select bookID as 'ID', book_title as 'Title', book_author as 'Author', book_category as 'Category', book_quantity as 'Quantity' FROM Book";
                             break;
 
                         case "Student table":
-                            query = "SELECT StudentID AS [Student ID], Student_FName AS [First Name], Student_LName AS [Last Name], Student_Email AS [Email], Student_CellphoneNo AS [Cellphone No] FROM Student";
+                            query = "SELECT StudentID as 'Student ID', (Student_fname + ' ' + student_lname) as 'Name and surname', student_email as 'Email', student_cellphoneno as 'Contact Number' FROM Student";
                             break;
 
                         case "Staff table":
-                            query = "SELECT StaffID AS [Staff ID], Staff_FName AS [First Name], Staff_LName AS [Last Name], Staff_Username AS [Username], Staff_Role AS [Role] FROM Staff";
+                            query = "SELECT StaffID as 'Staff ID', (staff_fname + ' ' + staff_lname) as 'Name and surname', staff_username as 'Username', staff_password as 'Password', staff_role as 'Role' FROM staff";
                             break;
 
                         case "Borrow table":
-                            query = "SELECT BorrowID AS [Borrow ID], Borrow_Date AS [Borrow Date], Due_Date AS [Due Date], Return_Date AS [Return Date] FROM Borrow";
+                            query = @"SELECT (Student_Fname + ' ' + Student_lname) as 'Name and surname', book.book_title as 'Book title', Borrow.Borrow_Date as 'Borrow date', Borrow.Return_Date as 'Return date'
+                                     FROM Borrow, book, student WHERE Borrow.StudentID = Student.StudentID AND Borrow.BookID = book.BookID";
                             break;
 
                         case "Reservation table":
-                            query = "SELECT ReservationID AS [Reservation ID], Reserved_Date AS [Reserved Date], Reservation_Status AS [Status] FROM Reservation";
+                            query = @"SELECT (Student_Fname + ' ' + Student_lname) as 'Name and surname', book.book_title as 'Book title', reservation.Reserved_date as 'Reservetion date', reservation.reservation_status as 'Status'
+                                     FROM reservation, book, student WHERE reservation.StudentID = Student.StudentID AND reservation.BookID = book.BookID";
                             break;
 
                         default:

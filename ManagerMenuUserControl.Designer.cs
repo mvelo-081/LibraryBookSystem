@@ -44,7 +44,7 @@
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(177, 153);
             this.btn6.TabIndex = 17;
-            this.btn6.Text = "feature 6";
+            this.btn6.Text = "Coming soon";
             this.btn6.UseVisualStyleBackColor = false;
             this.btn6.Click += new System.EventHandler(this.viewBorrowHistBtn_Click);
             // 

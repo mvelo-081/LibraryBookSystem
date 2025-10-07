@@ -34,23 +34,23 @@
             this.ist2koDataSet = new LibraryBookSystem.ist2koDataSet();
             this.staffTableAdapter = new LibraryBookSystem.ist2koDataSetTableAdapters.StaffTableAdapter();
             this.tableAdapterManager = new LibraryBookSystem.ist2koDataSetTableAdapters.TableAdapterManager();
-            this.welcomeLabel = new System.Windows.Forms.Label();
-            this.roleLabel = new System.Windows.Forms.Label();
-            this.UserIdTextData = new System.Windows.Forms.TextBox();
-            this.passwordLabel = new System.Windows.Forms.Label();
-            this.UserPasswordTextData = new System.Windows.Forms.TextBox();
-            this.signInBtn = new System.Windows.Forms.Button();
-            this.subWelcomeLabel = new System.Windows.Forms.Label();
+            this.LandingPageMainPanel = new System.Windows.Forms.Panel();
+            this.ErrorLabel = new System.Windows.Forms.Label();
             this.navPanel = new System.Windows.Forms.Panel();
             this.toggleAdminRoleBtn = new System.Windows.Forms.Button();
             this.IconLabel = new System.Windows.Forms.Label();
             this.IconImgPanel = new System.Windows.Forms.Panel();
-            this.LandingPageMainPanel = new System.Windows.Forms.Panel();
-            this.ErrorLabel = new System.Windows.Forms.Label();
+            this.subWelcomeLabel = new System.Windows.Forms.Label();
+            this.signInBtn = new System.Windows.Forms.Button();
+            this.UserPasswordTextData = new System.Windows.Forms.TextBox();
+            this.passwordLabel = new System.Windows.Forms.Label();
+            this.UserIdTextData = new System.Windows.Forms.TextBox();
+            this.roleLabel = new System.Windows.Forms.Label();
+            this.welcomeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ist2koDataSet)).BeginInit();
-            this.navPanel.SuspendLayout();
             this.LandingPageMainPanel.SuspendLayout();
+            this.navPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // staffBindingSource
@@ -77,82 +77,40 @@
             this.tableAdapterManager.StudentTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = LibraryBookSystem.ist2koDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // welcomeLabel
+            // LandingPageMainPanel
             // 
-            this.welcomeLabel.AutoSize = true;
-            this.welcomeLabel.Font = new System.Drawing.Font("Segoe UI", 16.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLabel.Location = new System.Drawing.Point(437, 162);
-            this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(349, 38);
-            this.welcomeLabel.TabIndex = 15;
-            this.welcomeLabel.Text = "Welcome back, Librarian!";
+            this.LandingPageMainPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LandingPageMainPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.LandingPageMainPanel.BackgroundImage = global::LibraryBookSystem.Properties.Resources.pngwing_com;
+            this.LandingPageMainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.LandingPageMainPanel.Controls.Add(this.ErrorLabel);
+            this.LandingPageMainPanel.Controls.Add(this.navPanel);
+            this.LandingPageMainPanel.Controls.Add(this.subWelcomeLabel);
+            this.LandingPageMainPanel.Controls.Add(this.signInBtn);
+            this.LandingPageMainPanel.Controls.Add(this.UserPasswordTextData);
+            this.LandingPageMainPanel.Controls.Add(this.passwordLabel);
+            this.LandingPageMainPanel.Controls.Add(this.UserIdTextData);
+            this.LandingPageMainPanel.Controls.Add(this.roleLabel);
+            this.LandingPageMainPanel.Controls.Add(this.welcomeLabel);
+            this.LandingPageMainPanel.Location = new System.Drawing.Point(2, 2);
+            this.LandingPageMainPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LandingPageMainPanel.MinimumSize = new System.Drawing.Size(1173, 661);
+            this.LandingPageMainPanel.Name = "LandingPageMainPanel";
+            this.LandingPageMainPanel.Size = new System.Drawing.Size(1180, 667);
+            this.LandingPageMainPanel.TabIndex = 8;
             // 
-            // roleLabel
+            // ErrorLabel
             // 
-            this.roleLabel.AutoSize = true;
-            this.roleLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roleLabel.Location = new System.Drawing.Point(381, 249);
-            this.roleLabel.Name = "roleLabel";
-            this.roleLabel.Size = new System.Drawing.Size(205, 23);
-            this.roleLabel.TabIndex = 16;
-            this.roleLabel.Text = "Enter Librarian username:";
-            // 
-            // UserIdTextData
-            // 
-            this.UserIdTextData.BackColor = System.Drawing.SystemColors.Control;
-            this.UserIdTextData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UserIdTextData.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserIdTextData.Location = new System.Drawing.Point(385, 295);
-            this.UserIdTextData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.UserIdTextData.Name = "UserIdTextData";
-            this.UserIdTextData.Size = new System.Drawing.Size(277, 30);
-            this.UserIdTextData.TabIndex = 17;
-            // 
-            // passwordLabel
-            // 
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.Location = new System.Drawing.Point(381, 345);
-            this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(130, 23);
-            this.passwordLabel.TabIndex = 18;
-            this.passwordLabel.Text = "Enter password:";
-            // 
-            // UserPasswordTextData
-            // 
-            this.UserPasswordTextData.BackColor = System.Drawing.SystemColors.Control;
-            this.UserPasswordTextData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UserPasswordTextData.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserPasswordTextData.Location = new System.Drawing.Point(385, 391);
-            this.UserPasswordTextData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.UserPasswordTextData.Name = "UserPasswordTextData";
-            this.UserPasswordTextData.PasswordChar = '5';
-            this.UserPasswordTextData.Size = new System.Drawing.Size(277, 30);
-            this.UserPasswordTextData.TabIndex = 19;
-            this.UserPasswordTextData.UseSystemPasswordChar = true;
-            // 
-            // signInBtn
-            // 
-            this.signInBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.signInBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.signInBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signInBtn.Location = new System.Drawing.Point(385, 448);
-            this.signInBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.signInBtn.Name = "signInBtn";
-            this.signInBtn.Size = new System.Drawing.Size(187, 42);
-            this.signInBtn.TabIndex = 20;
-            this.signInBtn.Text = "Sign in";
-            this.signInBtn.UseVisualStyleBackColor = false;
-            // 
-            // subWelcomeLabel
-            // 
-            this.subWelcomeLabel.AutoSize = true;
-            this.subWelcomeLabel.Location = new System.Drawing.Point(435, 203);
-            this.subWelcomeLabel.Name = "subWelcomeLabel";
-            this.subWelcomeLabel.Size = new System.Drawing.Size(356, 16);
-            this.subWelcomeLabel.TabIndex = 21;
-            this.subWelcomeLabel.Text = "Manage books, members, and library operations with ease";
-            this.subWelcomeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ErrorLabel.AutoSize = true;
+            this.ErrorLabel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.ErrorLabel.Location = new System.Drawing.Point(381, 426);
+            this.ErrorLabel.Name = "ErrorLabel";
+            this.ErrorLabel.Size = new System.Drawing.Size(209, 17);
+            this.ErrorLabel.TabIndex = 23;
+            this.ErrorLabel.Text = "Use the Mananger Profile to Sign in!";
+            this.ErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ErrorLabel.Visible = false;
             // 
             // navPanel
             // 
@@ -199,40 +157,82 @@
             this.IconImgPanel.TabIndex = 0;
             this.IconImgPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.IconImgPanel_Paint);
             // 
-            // LandingPageMainPanel
+            // subWelcomeLabel
             // 
-            this.LandingPageMainPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LandingPageMainPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.LandingPageMainPanel.BackgroundImage = global::LibraryBookSystem.Properties.Resources.pngwing_com;
-            this.LandingPageMainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.LandingPageMainPanel.Controls.Add(this.ErrorLabel);
-            this.LandingPageMainPanel.Controls.Add(this.navPanel);
-            this.LandingPageMainPanel.Controls.Add(this.subWelcomeLabel);
-            this.LandingPageMainPanel.Controls.Add(this.signInBtn);
-            this.LandingPageMainPanel.Controls.Add(this.UserPasswordTextData);
-            this.LandingPageMainPanel.Controls.Add(this.passwordLabel);
-            this.LandingPageMainPanel.Controls.Add(this.UserIdTextData);
-            this.LandingPageMainPanel.Controls.Add(this.roleLabel);
-            this.LandingPageMainPanel.Controls.Add(this.welcomeLabel);
-            this.LandingPageMainPanel.Location = new System.Drawing.Point(2, 2);
-            this.LandingPageMainPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.LandingPageMainPanel.MinimumSize = new System.Drawing.Size(1173, 661);
-            this.LandingPageMainPanel.Name = "LandingPageMainPanel";
-            this.LandingPageMainPanel.Size = new System.Drawing.Size(1180, 667);
-            this.LandingPageMainPanel.TabIndex = 8;
+            this.subWelcomeLabel.AutoSize = true;
+            this.subWelcomeLabel.Location = new System.Drawing.Point(435, 203);
+            this.subWelcomeLabel.Name = "subWelcomeLabel";
+            this.subWelcomeLabel.Size = new System.Drawing.Size(356, 16);
+            this.subWelcomeLabel.TabIndex = 21;
+            this.subWelcomeLabel.Text = "Manage books, members, and library operations with ease";
+            this.subWelcomeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // ErrorLabel
+            // signInBtn
             // 
-            this.ErrorLabel.AutoSize = true;
-            this.ErrorLabel.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.ErrorLabel.Location = new System.Drawing.Point(381, 426);
-            this.ErrorLabel.Name = "ErrorLabel";
-            this.ErrorLabel.Size = new System.Drawing.Size(209, 17);
-            this.ErrorLabel.TabIndex = 23;
-            this.ErrorLabel.Text = "Use the Mananger Profile to Sign in!";
-            this.ErrorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ErrorLabel.Visible = false;
+            this.signInBtn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.signInBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.signInBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signInBtn.Location = new System.Drawing.Point(385, 448);
+            this.signInBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.signInBtn.Name = "signInBtn";
+            this.signInBtn.Size = new System.Drawing.Size(187, 42);
+            this.signInBtn.TabIndex = 20;
+            this.signInBtn.Text = "Sign in";
+            this.signInBtn.UseVisualStyleBackColor = false;
+            // 
+            // UserPasswordTextData
+            // 
+            this.UserPasswordTextData.BackColor = System.Drawing.SystemColors.Control;
+            this.UserPasswordTextData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UserPasswordTextData.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserPasswordTextData.Location = new System.Drawing.Point(385, 391);
+            this.UserPasswordTextData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UserPasswordTextData.Name = "UserPasswordTextData";
+            this.UserPasswordTextData.PasswordChar = '5';
+            this.UserPasswordTextData.Size = new System.Drawing.Size(277, 30);
+            this.UserPasswordTextData.TabIndex = 19;
+            this.UserPasswordTextData.UseSystemPasswordChar = true;
+            // 
+            // passwordLabel
+            // 
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordLabel.Location = new System.Drawing.Point(381, 345);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(130, 23);
+            this.passwordLabel.TabIndex = 18;
+            this.passwordLabel.Text = "Enter password:";
+            // 
+            // UserIdTextData
+            // 
+            this.UserIdTextData.BackColor = System.Drawing.SystemColors.Control;
+            this.UserIdTextData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UserIdTextData.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserIdTextData.Location = new System.Drawing.Point(385, 295);
+            this.UserIdTextData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UserIdTextData.Name = "UserIdTextData";
+            this.UserIdTextData.Size = new System.Drawing.Size(277, 30);
+            this.UserIdTextData.TabIndex = 17;
+            // 
+            // roleLabel
+            // 
+            this.roleLabel.AutoSize = true;
+            this.roleLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roleLabel.Location = new System.Drawing.Point(381, 249);
+            this.roleLabel.Name = "roleLabel";
+            this.roleLabel.Size = new System.Drawing.Size(205, 23);
+            this.roleLabel.TabIndex = 16;
+            this.roleLabel.Text = "Enter Librarian username:";
+            // 
+            // welcomeLabel
+            // 
+            this.welcomeLabel.AutoSize = true;
+            this.welcomeLabel.Font = new System.Drawing.Font("Segoe UI", 16.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeLabel.Location = new System.Drawing.Point(437, 162);
+            this.welcomeLabel.Name = "welcomeLabel";
+            this.welcomeLabel.Size = new System.Drawing.Size(349, 38);
+            this.welcomeLabel.TabIndex = 15;
+            this.welcomeLabel.Text = "Welcome back, Librarian!";
             // 
             // LandingPage
             // 
@@ -251,10 +251,10 @@
             this.Text = "Sign in";
             ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ist2koDataSet)).EndInit();
-            this.navPanel.ResumeLayout(false);
-            this.navPanel.PerformLayout();
             this.LandingPageMainPanel.ResumeLayout(false);
             this.LandingPageMainPanel.PerformLayout();
+            this.navPanel.ResumeLayout(false);
+            this.navPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
