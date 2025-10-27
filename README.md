@@ -72,11 +72,11 @@ The Manager profile contains **6 main functions** (3 active functions):
 ### How the application looks like 
 
 - This image below shows the landing page of our application
-![Landing page](https://github.com/mvelo-081/LibraryBookSystem/blob/main/Resources/LandingPage.png)
+<img src="[Landing page](https://github.com/mvelo-081/LibraryBookSystem/blob/main/Resources/LandingPage)" alt="Landing page" width="400">
 
 - This image below shows the Librarian landing page of our application
-<img src="/resources/LibrarianPage.png" alt="Librarian landing page" width="400">
+<img src="[Librarian landing page](https://github.com/mvelo-081/LibraryBookSystem/blob/main/Resources/LibrarianPage)" alt="Librarian landing page" width="400">
 
 - This image below shows the Manager landing page of our application
-<img src="/resources/ManagerPage.png" alt="Manager landing page" width="400">
+<img src="[Manager landing page](https://github.com/mvelo-081/LibraryBookSystem/blob/main/Resources/ManagerPage.png)" alt="Manager landing page" width="400">
 
