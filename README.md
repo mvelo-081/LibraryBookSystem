@@ -69,3 +69,14 @@ The Manager profile contains **6 main functions** (3 active functions):
 
 ---
 
+### How the application looks like 
+
+- This image below shows the landing page of our application
+<img src="/resources/LandingPage.png" alt="landing page" width="400">
+
+- This image below shows the Librarian landing page of our application
+<img src="/resources/LibrarianPage.png" alt="Librarian landing page" width="400">
+
+- This image below shows the Manager landing page of our application
+<img src="/resources/ManagerPage.png" alt="Manager landing page" width="400">
+
